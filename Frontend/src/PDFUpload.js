@@ -11,7 +11,7 @@ const PDFUpload = ({ onFileAccepted }) => {
         if (file && file.type === 'application/pdf') {
             onFileAccepted(file);
             setSelectedFile(file.name);
-            setPdfSrc(URL.createObjectURL(file)); 
+            setPdfSrc(URL.createObjectURL(file));
         } else {
             alert('Please upload a PDF file.');
             setSelectedFile(null);
@@ -35,7 +35,7 @@ const PDFUpload = ({ onFileAccepted }) => {
         if (file && file.type === 'application/pdf') {
             onFileAccepted(file);
             setSelectedFile(file.name);
-            setPdfSrc(URL.createObjectURL(file)); 
+            setPdfSrc(URL.createObjectURL(file));
         } else {
             alert('Please upload a PDF file.');
             setSelectedFile(null);
@@ -45,6 +45,11 @@ const PDFUpload = ({ onFileAccepted }) => {
 
     const handleClick = () => {
         fileInputRef.current.click();
+    };
+
+    const handleCancel = () => {
+        setPdfSrc(null); // Clear the uploaded PDF
+        setSelectedFile(null); // Clear the selected file
     };
 
     return (
@@ -72,7 +77,12 @@ const PDFUpload = ({ onFileAccepted }) => {
                 />
                 <p>{selectedFile ? `Selected file: ${selectedFile}` : 'Drag and drop a PDF file here, or click to select a file'}</p>
             </div>
-            {pdfSrc && <iframe src={pdfSrc} width="100%" height="500px" title="Uploaded PDF"></iframe>}
+            {pdfSrc && (
+                <div>
+                    <iframe src={pdfSrc} width="100%" height="500px" title="Uploaded PDF"></iframe>
+                </div>
+            )}
+            {pdfSrc && <button onClick={handleCancel}>Cancel</button>}
         </div>
     );
 };
