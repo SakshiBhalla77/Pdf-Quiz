@@ -8,6 +8,7 @@ import UploadButton from './UploadButton';
 import Footer from './Footer';
 import About from './About';
 import Contact from './Contact';
+import Quiz from './Quiz'; // Import the Quiz component
 import './index.css';
 
 function App() {
@@ -19,7 +20,6 @@ function App() {
 
   const handleUpload = () => {
     if (file) {
-
       console.log('Uploading file:', file);
     } else {
       alert('Please select a file first!');
@@ -44,6 +44,7 @@ function App() {
             />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/quiz" element={<Quiz />} /> {/* Add Quiz route */}
           </Routes>
         </main>
         <Footer />

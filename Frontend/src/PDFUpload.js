@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import CancelButton from './CancelButton'; // Import the CancelButton component
 
 const PDFUpload = ({ onFileAccepted }) => {
     const [dragOver, setDragOver] = useState(false);
@@ -80,9 +81,9 @@ const PDFUpload = ({ onFileAccepted }) => {
             {pdfSrc && (
                 <div>
                     <iframe src={pdfSrc} width="100%" height="500px" title="Uploaded PDF"></iframe>
+                    <CancelButton onClick={handleCancel} /> {/* Use the CancelButton component */}
                 </div>
             )}
-            {pdfSrc && <button onClick={handleCancel}>Cancel</button>}
         </div>
     );
 };
