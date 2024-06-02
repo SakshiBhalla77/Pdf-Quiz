@@ -1,0 +1,281 @@
+Quiz Questions
+Multi-choice questions (tick the write answer/answers)
+1.The actual energy requirement for the separation will be many times ---------Wmin
+a)greater than
+b)less than
+c)equal to
+2. The most commonly used to separate a solution that has a mixture of some desirable
+components and some that are not desirable.
+a)Ultra-filtration
+b)Micro-filtration
+c)nano-filtration
+d)reverse osmosis
+3.For food products, the water activity is generally less than
+a)1
+b)0.25
+c).65
+d).5
+4.This initial drying period is followed by a much slower rate of drying as the moisture content
+of the product -----------.
+a)decreases
+b)increrease
+c)constant
+5.Under hygienic conditions and without other treatment, meat can be stored at above its
+freezing point ( ------) for about six weeks without spoilage16.
+17.a)–1.5 °C
+b)6 °C
+c)10 °C
+d)1000 °C
+6.What is the collective term for disease causing microorganisms?
+a)Parasite
+b)Bacteria
+c)Pathogen
+d)Virus
+e)Host
+7.What vitamin is synthesized by bacteria in the intestine?
+a)Vitamin E
+b)Vitamin K
+c)Vitamin D
+d)Vitamin A
+e)Vitamin C
+8.What bacterium is called the "cafeteria germ"?
+a)Escherichia coli
+b)Clostridium botulism
+c)Campylobacter jejuni
+d)Salmonella
+e)Clostridium perfringens
+9.Who is at a greater risk of developing a food borne illness?
+a)Adolescentsb)Men
+c)Middle-ages adults
+d)Women
+e)Infants and toddlers
+10.Which of the following is not a condition that bacteria would thrive and multiply?
+a)Stable for a period of time
+b)Dry
+c)Nutrient-rich
+d)Proper pH
+e)Correct temperature
+11.What item in the kitchen may be the most contaminated item?
+a)Counter top
+b)Sink
+c)Dishwasher
+d)Cooking utensils
+e)Sponge
+12.What is the temperature danger zone?
+a)30°F-130°F
+b)60°F-160°F
+c)40°F-140°F
+d)20°F-120°F
+e)50°F-150°F
+13.What should be done if you are unsure about the safety of a food?
+a)Take a small taste
+b)Throw it out
+c)Examine closely under good lightingd)Reheat thoroughly
+e)Smell it
+14.Thefoodbusiness may be characterized as:
+a)Vulnerable to spoilage,
+b)High temp.
+c)Quality project
+15.What agency is responsible for ensuring safe and accurately labeled meat, poultry, and
+eggs?
+a)Environmental Protection Agency
+b)Animal and Plant Health Inspection Service
+c)World Health Organization
+d)USDA Food Safety and Inspection Service
+e)Food and Drug Administration
+Fill in the blanks type Questions
+1.Major manufactured food product is ………………..(Sugar).
+2.Quality Factors in Food industry ……………………..( Appearance Factors).
+3.………………..usually measured by counts of bacteria, yeast, mold, and insect,
+fragments sediment levels.( Sanitary Quality)
+4.………………trends project India to emerge as the most populous country in the world
+in the coming decades. (Population).
+5.Average annual growth rates for per capita consumption of selected food items
+6.Projections of ………………(Food Demand).
+7.Organic substances that regulate numerous and diverse …………………..processes in
+the body (physiological).
+8.Proponents of low carb diets blame ……………………….on the obesity epidemic but
+this is not well supported by research.( carbohydrates).9.………………..Ingredients with Purpose Direct food additives serve four major purpos es
+in our foods. (Food Additives).
+10.To make foods appealing –the majority of ………………are most often used for this
+purpose. (Food additives).
+11.………………such as vermin, insects, fungi and bacteria -these may feed on the food
+and contaminate it. (living organisms)
+12.…………….. including damage due to pressure or poor handling, physical changes such
+as dehydration or crystallisation. (Physical processes)
+13.Light can lead to oxidation of fats in some raw materials…………….(dairy products).
+14.Removal of ……………..outer layers, such a s potato peeling or the skinning of peaches.
+(unwanted)
+15.16.The softness or hardness of a grinding wheel depends upon the type & amount of
+bonding material used. For general purpose cutter grinding…………..grinding wheel is
+normally used. ( aluminum oxide)
+17.Tin ba sed white metals are used, where bearings are subjected to………………….. (high
+pressure & load).
+18.19.The concentration of water vapour in troposphere, which depends upon the altitude &
+temperature varies in the range of zero to …………….percent. (4)
+20.The main industri al source of emission of hydrogen sulphide air pollutant
+is………………….(coal based thermal power plants).
+21.Waste/polluted water discharged from electroplating, blast furnace and coal mining
+industries contain mainly ………………substances.(inorganic).
+22.The amount of c hemical coagulant added for treatment of polluted water
+………………..with increase in temperature of the polluted water to be treated.(
+decreases.)
+23.24.Presence of bacteria in potable (drinking) water causes……………………( disease).
+25.COD of raw municipal sewage may be in the range of about ………………..mg/litre.
+(90-120).
+26.27.Presence of …………..hardness is responsible for the temporary hardness in water.
+(Calcium).
+28.Microwave ovens Convert-------------- into electromagnetic field. (electrical energy)29.----------------- of food system is affected by free ionic salt content, moisture, and solid
+contents. (Dielectric behavior)
+30.Another distinguishing characteristic is a pH less than -----, which is sufficient to kill
+most bacteria. (4.6)
+31.Fermentation by yeast is the basis of the ------------------ industry. (alcoholic beverage)
+32.ΔG
+m= ΔH
+m–TΔS
+mwhere ΔH
+mis the enhalpy of mixing and ΔS
+mis the----------- of
+mixing. (entropy)
+33.----------reduction by irreversible adsorption of compounds. (Pore size)
+34.An asymmetric membrane comprises a very thin ( --------micron) skin layer on a highly
+porous (100 -200 microns) thick substructure. (0.1 -1.0)
+35.------------------ is a water purification technology that uses a semipermeable membrane.
+(Reverse osmosis )
+36.Reverse osmosis is extensively used in the --------industry for the production of whey
+protein powders. (dairy)
+37.Water activity (a
+w) is defined as the ratio of the ------------ of water measured at the food
+surface (P
+w)to the saturation vapor pressure of pure water at the same temperatur e (P
+wº).
+(vapor pressure)
+38.Primary separation of powder is accomplished by gravitational setting of the -----------
+powder particles. (heavier)
+39.Air can be passed either through steam coils or an electric heater to attain elevated
+temperatures, typically bet ween------and-----℃. (150,500)
+40.Lactic acid bacteria added to milk convert lactose to -----------. (lactic acid)
+41.Fatter fish are generally pretty good sources of Vitamins ---and---. (A,D)
+42.Food production storage and regeneration method utilizing principle of -------
+temperature control to preserve qualities of processed foods. (low)
+43.In cook-freez production, require high speed -------temperature at least -20o
+C w/in 90
+mins. (low)
+44.Crystalline sugar is stored in -------. (silos)
+45.In Continuous sugar dissolving process, as hot dissolving process at a temperature of 85°C or cold dissolving process at a temperature of -------------- °C. (35 –45)
+46.The consumption of meat has various traditions and rituals associated with it in different
+cultures such as -----------and-----------. (kosher,halal)
+47.Draining as much blood as possible from the carcaseis necessary because blood causes
+the meat to have an unap pealing appearance and is a very good breeding ground for ------
+-------. (microorganisms)
+48.----------- and colour uniformity are vital components of visual quality of fresh foods and
+play a major role in consumer choice. (Colour)
+49.High levels of lauric acid to improve ------------------ properties for use in confectionery,
+coatings or low fat dairy products. (emulsification)
+50.If the humidity of the storage environment exceeds the equilibrium relative humidity
+(ERH) of the food, the food will -------------- moisture during storage. (gain)
+51.Eggs, fruit or vegetables may be separated into ------------ weight categories using spring -
+loaded, strain gauge or electronic weighing devices incorporated into conveying systems.
+(weight)
+52.Sterilization is th e total elimination of all --------------------- including spores.
+(microorganisms)
+53.54.Dose of chlorine for disinfection of water is about ……………..mg/litre of water. (1)
+55.Water effluent generated in printing industry is decolourised by………………….
+(Electrolytic de composition)
+True/False Type Questions
+1.The quality of carbohydrates is the real issue and it is still wise to consume quality whole
+grains with adequate fiber.(True/False)
+2.A balanced diet containing recommended servings of carbohydrates, fats and proteins
+will meet the RDA standards. (True/False)
+3.A diet containing recommended servings of carbohydrates, fats and proteins will meet
+the RDA standards. (True/False)
+4.Food additives are largely responsible for the food supply to which we have grownaccustomed. (True/False)
+5.Detection of indirect additives and impurities has reached incredibly precise proportions
+allowing for identification of infinitesimally minute amounts of substances in foods.
+(True/False)
+6.Food additives afford us the convenience and enjoyment of a wide variety of appetizing,
+nutritious, fresh, and palatable foods. (True/False)
+7.Food processors do the same thing by using ascorbic acid –the principal active
+ingredient in citrus juice –when packaging fruit slices. (True/False)
+8.Potatoes with higher starch content, which take up less oil and require less energy during
+frying.(True/False)
+9.Wheat with increased levels of high molecular weight glutamines for improved bread
+making performance . (True/False)
+10.Cleaning is essentially separatio n in which some difference in physical properties of the
+contaminants and the food units is exploited. . (True/False)
+11.Lye (1 –2% alkali) solution can be used to soften the skin which can again be removed by
+water sprays. There is, however, a danger of damag e to the product. . (True/False)
+12.Removal of unwanted outer layers, such as potato peeling or the skinning of peaches. .
+(True/False)
+13.Food processing typically takes clean, harvested crops or slaughtered and butchered
+animal products . (True/False)
+14.Food safety includes guidelines and procedures that help keep foods free from
+contaminants and safe to eat. (True/False)
+15.The four Cs of keeping food safe in the kitchen are clean, combat cross contamination,
+cook thoroughly, and chill to a cold enough temperature. (True/False)
+16.It is acceptable to leave meat on the counter for the afternoon for thawing purposes.
+(True/False)
+17.Food preservation illustrates the roles that farmers, food manufacturers, food
+transporters, retailers, and consumers play in ensuring the food supply remains safe.
+(True/False)
+18.Foods that have been approved for irradiation in the United States include fruits,
+vegetables, herbs, spices, fresh meat, and white potatoes. (True/False)19.As fruit ripens, sugars are linked together to form starch. (True/False)
+20.The missing ingredient in whole wheat flour is folic acid. (True/False)
+21.Brush border enzymes are located in the microvilli of the large intestine. (True/False)
+22.Emotional and physical stress can trigger the release of epinephrine. (True/False)
+23.Honeyshould never be given to children under one year of age. (True/False)
+24.Foods high in carbohydrate foods are the main staples in many of the world's cuisines.
+(True/False)
+25.TheDietary Guidelines for Americans 2005 specifically recommend consuming
+vegetable oils daily to meet vitamin E needs. (True/False)
+26.It is important for milk to be packaged in opaque containers to preserve the riboflavin
+content from being destroyed by light. (True/False)
+27.Alcohol can be absorbed through the stomach directly into the blood .(True/False)
+28.The depth of penetration is the depth to which microwave energy reaches until it is 37%
+of its value. (true/ false)
+29.Pickling may also improve the nutritious value of food by introducing B vitamins
+produced by bacteria. (true/ false)
+30.Both the concentrate and the permeate could be recovered to use. (true/false)
+31.The membrane operations more widely used are those based in applying a pressure
+difference between both sides of the membrane. (true/false)
+32.Nanofiltration is a form of filtration that uses membranes to separate different fluids or
+ions.(true/false)
+33.The smallest molecular weight species for which the membranes have more than 100%
+rejection. (true/false)
+34.During drying, both moisture content and water activit y change. (true/false)
+35.Drying rate is plotted against the moisture content (instead of time). (true/false)
+36.Atomization produces a cloud of droplets with very large surface area for drying.
+(true/false)
+37.A condenser collects the vapors as they exit the freez e dryer to enhance efficiency and
+prevent fouling of the vacuum pump. (true/false)
+38.InCook-Chill Production Low temperature conditions above freezing point, 0 -3o
+C.(true/false)
+39.During the lautering process (also called “wort separation” or “mash separation”) the
+undissolved substances are separated from the wort. (true/ false)
+40.Whisky is usually filtrated through a cellulose filter to remove fatty particles at a
+temperature between 4 and 40 ° C prior to being run into bottles. (true/false)
+41.The blended whisky is left undisturbed in oak casks (generally plain oak) for 11 to 12
+months in order to optimize the product quality. (true/false)
+42.The muscles of stressed animals are low in water and glycogen, and their pHfails to
+attain acidic values, all of which results in poor meat quality. (true/ false)
+43.During the first day after death, glycolysis continues until the accumulation of lactic
+acidcauses the pHto reach about 8.5. ( true/false)
+44.For low temperature processes such as chilling, freezing or freeze -drying, the colour
+changes little during processing . (true/false)
+45.Chemical analysis of fat and protein in milk may be carried out to determine its
+suitability for manufacturing cheese, yoghurt or cream. (true/false)
+46.Smooth-skinnedfruits and vegetables are much typical to clean and are less likely to
+harbour insects or fungi than ribbed or irregular units. (true/false)
+47.Hard wheat with 11.5 –14.0% protein is desirable for white bread and some whole wheat
+breads require even higher pro tein levels, 14 –16%.(true/false)
+48.Shape sorting is useful in cases where the food units are contaminated with particles of
+similar size and weight. (true/false)
+49.Lye (5 –7% alkali) solution can be used to soften the skin which can again be removed by
+water sprays.(true/false)
+50.Effluent from processing oilseeds contains some fats usually as suspended matter.
+(true/false)
+51.Discharge licenses may include maxima for flow, temperature, suspended solids,
+dissolved solids, BOD
+5, nitrogen, phosphorous and turbidity. (true/false)
+52.Canning aims to destroy all micro -organisms and their spores through the application of
+ice.(true/false)
