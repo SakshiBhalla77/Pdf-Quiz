@@ -1,0 +1,34 @@
+/* src/index.css */
+body {
+  font-family: 'Helvetica', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #333;
+}
+
+.navbar, .footer {
+  background-color: #4B0082; /* Purple background */
+  color: white; /* White text */
+}
+
+.nav-link, .nav-link:hover {
+  color: white;
+}
+
+.nav-link:hover {
+  color: #dda0dd;
+}
+
+.button {
+  background-color: #4B0082;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.button:hover {
+  background-color: #dda0dd;
+}
