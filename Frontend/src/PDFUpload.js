@@ -11,7 +11,7 @@ const PDFUpload = ({ onFileAccepted }) => {
         if (file && file.type === 'application/pdf') {
             onFileAccepted(file);
             setSelectedFile(file.name);
-            setPdfSrc(URL.createObjectURL(file)); // Set PDF source for rendering
+            setPdfSrc(URL.createObjectURL(file)); 
         } else {
             alert('Please upload a PDF file.');
             setSelectedFile(null);
@@ -35,7 +35,7 @@ const PDFUpload = ({ onFileAccepted }) => {
         if (file && file.type === 'application/pdf') {
             onFileAccepted(file);
             setSelectedFile(file.name);
-            setPdfSrc(URL.createObjectURL(file)); // Set PDF source for rendering
+            setPdfSrc(URL.createObjectURL(file)); 
         } else {
             alert('Please upload a PDF file.');
             setSelectedFile(null);
