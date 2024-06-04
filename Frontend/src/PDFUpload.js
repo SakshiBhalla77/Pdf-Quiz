@@ -9,7 +9,7 @@ const PDFUpload = ({ onFileAccepted }) => {
 
     const uploadFile = async (file) => {
         const formData = new FormData();
-        formData.append('file', file); // Ensure this key matches the FastAPI endpoint
+        formData.append('file', file); 
 
         try {
             const response = await axios.post('http://localhost:8000/upload', formData, {
@@ -29,7 +29,7 @@ const PDFUpload = ({ onFileAccepted }) => {
             onFileAccepted(file);
             setSelectedFile(file.name);
             setPdfSrc(URL.createObjectURL(file));
-            uploadFile(file); // Upload file to the backend
+            uploadFile(file); 
         } else {
             alert('Please upload a PDF file.');
             setSelectedFile(null);
