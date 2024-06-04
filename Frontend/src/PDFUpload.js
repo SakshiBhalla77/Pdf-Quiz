@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import CancelButton from './CancelButton'; // Import the CancelButton component
+import axios from 'axios';
 
 const PDFUpload = ({ onFileAccepted }) => {
     const [dragOver, setDragOver] = useState(false);
@@ -7,12 +7,29 @@ const PDFUpload = ({ onFileAccepted }) => {
     const [pdfSrc, setPdfSrc] = useState(null);
     const fileInputRef = useRef(null);
 
+    const uploadFile = async (file) => {
+        const formData = new FormData();
+        formData.append('file', file); // Ensure this key matches the FastAPI endpoint
+
+        try {
+            const response = await axios.post('http://localhost:8000/upload', formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data',
+                },
+            });
+            console.log('File uploaded successfully', response.data);
+        } catch (error) {
+            console.error('Error uploading file', error);
+        }
+    };
+
     const handleFileChange = (event) => {
         const file = event.target.files[0];
         if (file && file.type === 'application/pdf') {
             onFileAccepted(file);
             setSelectedFile(file.name);
             setPdfSrc(URL.createObjectURL(file));
+            uploadFile(file); // Upload file to the backend
         } else {
             alert('Please upload a PDF file.');
             setSelectedFile(null);
@@ -37,6 +54,7 @@ const PDFUpload = ({ onFileAccepted }) => {
             onFileAccepted(file);
             setSelectedFile(file.name);
             setPdfSrc(URL.createObjectURL(file));
+            uploadFile(file); // Upload file to the backend
         } else {
             alert('Please upload a PDF file.');
             setSelectedFile(null);
@@ -81,7 +99,7 @@ const PDFUpload = ({ onFileAccepted }) => {
             {pdfSrc && (
                 <div>
                     <iframe src={pdfSrc} width="100%" height="500px" title="Uploaded PDF"></iframe>
-                    <CancelButton onClick={handleCancel} /> {/* Use the CancelButton component */}
+                    <button onClick={handleCancel}>Cancel</button> {/* Simple cancel button */}
                 </div>
             )}
         </div>
