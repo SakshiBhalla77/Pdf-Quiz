@@ -1,6 +1,6 @@
 // src/Quiz.js
 import React, { useState, useEffect } from 'react';
-import questionsData from './components/questions.json';
+import questionsData from '../components/questions.json';
 
 const Quiz = () => {
     const [questions, setQuestions] = useState([]);

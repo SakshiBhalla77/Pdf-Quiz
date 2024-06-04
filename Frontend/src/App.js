@@ -1,14 +1,14 @@
 // src/App.js
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from './Navbar';
-import MainContent from './MainContent';
-import PDFUpload from './PDFUpload';
-import UploadButton from './UploadButton';
-import Footer from './Footer';
-import About from './About';
-import Contact from './Contact';
-import Quiz from './Quiz'; // Import the Quiz component
+import Navbar from './screens/Navbar';
+import MainContent from './screens/MainContent';
+import PDFUpload from './screens/PDFUpload';
+import UploadButton from './components/UploadButton';
+import Footer from './components/Footer';
+import About from './screens/About';
+import Contact from './screens/Contact';
+import Quiz from './screens/Quiz'; // Import the Quiz component
 import './index.css';
 
 function App() {
