@@ -7,10 +7,15 @@ const PDFUpload = ({ onFileAccepted }) => {
     const [pdfSrc, setPdfSrc] = useState(null);
     const fileInputRef = useRef(null);
 
-    const uploadFile = async (file) => {
+    const uploadFile = async () => {
+        if (!selectedFile) {
+            alert('No file selected to upload');
+            return;
+        }
+        
         const formData = new FormData();
-        formData.append('file', file); 
-
+        formData.append('file', selectedFile);
+        
         try {
             const response = await axios.post('http://localhost:8000/upload', formData, {
                 headers: {
@@ -27,9 +32,8 @@ const PDFUpload = ({ onFileAccepted }) => {
         const file = event.target.files[0];
         if (file && file.type === 'application/pdf') {
             onFileAccepted(file);
-            setSelectedFile(file.name);
+            setSelectedFile(file);
             setPdfSrc(URL.createObjectURL(file));
-            uploadFile(file); 
         } else {
             alert('Please upload a PDF file.');
             setSelectedFile(null);
@@ -52,9 +56,8 @@ const PDFUpload = ({ onFileAccepted }) => {
         const file = event.dataTransfer.files[0];
         if (file && file.type === 'application/pdf') {
             onFileAccepted(file);
-            setSelectedFile(file.name);
+            setSelectedFile(file);
             setPdfSrc(URL.createObjectURL(file));
-            uploadFile(file); // Upload file to the backend
         } else {
             alert('Please upload a PDF file.');
             setSelectedFile(null);
@@ -67,8 +70,8 @@ const PDFUpload = ({ onFileAccepted }) => {
     };
 
     const handleCancel = () => {
-        setPdfSrc(null); // Clear the uploaded PDF
-        setSelectedFile(null); // Clear the selected file
+        setPdfSrc(null);
+        setSelectedFile(null);
     };
 
     return (
@@ -94,12 +97,13 @@ const PDFUpload = ({ onFileAccepted }) => {
                     style={styles.input}
                     onChange={handleFileChange}
                 />
-                <p>{selectedFile ? `Selected file: ${selectedFile}` : 'Drag and drop a PDF file here, or click to select a file'}</p>
+                <p>{selectedFile ? `Selected file: ${selectedFile.name}` : 'Drag and drop a PDF file here, or click to select a file'}</p>
             </div>
             {pdfSrc && (
                 <div>
                     <iframe src={pdfSrc} width="100%" height="500px" title="Uploaded PDF"></iframe>
-                    <button onClick={handleCancel}>Cancel</button> {/* Simple cancel button */}
+                    <button style={styles.button} onClick={handleCancel}>Cancel</button>
+                    <button style={styles.button} onClick={uploadFile}>Upload</button> {/* Upload button */}
                 </div>
             )}
         </div>
@@ -122,6 +126,16 @@ const styles = {
     },
     input: {
         display: 'none',
+    },
+    button: {
+        backgroundColor: '#4B0082',
+        color: 'white',
+        border: 'none',
+        padding: '1rem 2rem',
+        cursor: 'pointer',
+        fontSize: '1rem',
+        marginTop: '20px',
+        alignSelf: 'center',
     },
 };
 
