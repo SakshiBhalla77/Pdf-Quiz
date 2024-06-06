@@ -73,6 +73,7 @@ const styles = {
   },
   navItem: {
     marginLeft: "20px",
+    fontSize: "1.1rem",
   },
   navLink: {
     textDecoration: "none",

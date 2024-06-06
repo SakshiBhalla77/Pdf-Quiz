@@ -115,11 +115,11 @@ const PDFUpload = ({ onFileAccepted }) => {
             height="500px"
             title="Uploaded PDF"
           ></iframe>
-          <button style={styles.button} onClick={handleCancel}>
-            Cancel
-          </button>
           <button style={styles.button} onClick={uploadFile}>
             Upload
+          </button>
+          <button style={styles.button} onClick={handleCancel}>
+            Cancel
           </button>{" "}
           {/* Upload button */}
         </div>
