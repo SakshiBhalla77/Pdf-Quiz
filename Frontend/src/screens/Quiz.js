@@ -12,10 +12,19 @@ const Quiz = () => {
   }, []);
 
   const handleCheckboxChange = (questionId, optionId) => {
-    setSelectedOptions((prevState) => ({
-      ...prevState,
-      [questionId]: optionId,
-    }));
+    setSelectedOptions((prevState) => {
+      const updatedOptions = { ...prevState };
+      // If the option is already selected, deselect it
+      if (updatedOptions[questionId] === optionId) {
+        delete updatedOptions[questionId];
+      } else {
+        // If the option is not selected, select it
+        updatedOptions[questionId] = optionId;
+      }
+      return updatedOptions;
+    });
+    // Prevent default checkbox behavior
+    return false;
   };
 
   const calculateScore = () => {
@@ -33,13 +42,13 @@ const Quiz = () => {
   return (
     <div>
       <h2>Quiz</h2>
-      <form>
+      <form style={{ fontSize: "1.2rem" }}>
         {questions.map((question) => (
-          <div key={question.question_id}>
+          <div key={question.question_id} style={{ marginBottom: "20px" }}>
             <h3>{question.question_text}</h3>
             {question.options.map((option) => (
               <div key={option.option_id}>
-                <label>
+                <label style={{ fontSize: "1.1rem" }}>
                   <input
                     type="checkbox"
                     checked={
@@ -51,6 +60,7 @@ const Quiz = () => {
                         option.option_id
                       )
                     }
+                    style={{ marginRight: "10px", transform: "scale(1.5)" }}
                   />
                   {option.text}
                 </label>
@@ -76,7 +86,7 @@ const Quiz = () => {
         Submit
       </button>
       {score !== null && (
-        <p style={{ color: "#333", marginTop: "20px" }}>
+        <p style={{ color: "#333", marginTop: "20px", fontSize: "1.2rem" }}>
           Your score is: <span style={{ fontWeight: "bold" }}>{score}</span> out
           of <span style={{ fontWeight: "bold" }}>{questions.length}</span>
         </p>

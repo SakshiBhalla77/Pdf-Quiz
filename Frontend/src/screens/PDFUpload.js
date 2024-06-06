@@ -131,14 +131,15 @@ const PDFUpload = ({ onFileAccepted }) => {
 const styles = {
   dropZone: {
     width: "80%",
-    height: "200px",
+    height: "300px",
     border: "2px dashed #4B0082",
     borderRadius: "10px",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    textAlign: "center",
+    //textAlign: "center",
     margin: "20px auto",
+    padding: "20px",
     cursor: "pointer",
     transition: "background-color 0.3s, border-color 0.3s",
   },
