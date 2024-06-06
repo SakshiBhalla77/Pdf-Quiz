@@ -1,19 +1,22 @@
 /* src/index.css */
 body {
-  font-family: 'Helvetica', sans-serif;
+  font-family: "Helvetica", sans-serif;
   margin: 0;
   padding: 0;
   background-color: #fff;
   color: #333;
 }
 
-.navbar, .footer {
-  background-color: #4B0082; /* Purple background */
+.navbar,
+.footer {
+  background-color: #4b0082; /* Purple background */
   color: white; /* White text */
 }
 
-.nav-link, .nav-link:hover {
+.nav-link,
+.nav-link:hover {
   color: white;
+  text-decoration: none;
 }
 
 .nav-link:hover {
@@ -21,7 +24,7 @@ body {
 }
 
 .button {
-  background-color: #4B0082;
+  background-color: #4b0082;
   color: white;
   border: none;
   padding: 1rem 2rem;
