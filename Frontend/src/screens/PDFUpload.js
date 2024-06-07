@@ -80,33 +80,36 @@ const PDFUpload = ({ onFileAccepted }) => {
 
   return (
     <div>
-      <div
-        style={{
-          ...styles.dropZone,
-          borderColor: dragOver ? "#dda0dd" : "#4B0082",
-          backgroundColor: dragOver ? "#f3e5f5" : "transparent",
-        }}
-        onDragOver={handleDragOver}
-        onDragLeave={handleDragLeave}
-        onDrop={handleDrop}
-        onClick={handleClick}
-        role="button"
-        tabIndex="0"
-        aria-label="Upload a PDF file"
-      >
-        <input
-          type="file"
-          accept="application/pdf"
-          ref={fileInputRef}
-          style={styles.input}
-          onChange={handleFileChange}
-        />
-        <p>
-          {selectedFile
-            ? `Selected file: ${selectedFile.name}`
-            : "Drag and drop a PDF file here, or click to select a file"}
-        </p>
-      </div>
+      {!selectedFile && ( // Conditionally render the drop zone
+        <div
+          style={{
+            ...styles.dropZone,
+            borderColor: dragOver ? "#dda0dd" : "#4B0082",
+            backgroundColor: dragOver ? "#f3e5f5" : "transparent",
+          }}
+          onDragOver={handleDragOver}
+          onDragLeave={handleDragLeave}
+          onDrop={handleDrop}
+          onClick={handleClick}
+          role="button"
+          tabIndex="0"
+          aria-label="Upload a PDF file"
+        >
+          <input
+            type="file"
+            accept="application/pdf"
+            ref={fileInputRef}
+            style={styles.input}
+            onChange={handleFileChange}
+          />
+          <p>
+            {selectedFile
+              ? `Selected file: ${selectedFile.name}` // Render the file name if selected
+              : "Drag and drop a PDF file here, or click to select a file"}
+          </p>
+        </div>
+      )}
+
       {pdfSrc && (
         <div>
           <iframe
