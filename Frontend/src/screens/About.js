@@ -1,89 +1,108 @@
-// src/About.js
 import React from "react";
 import "../index.css";
 
 const About = () => {
   return (
     <div style={styles.container}>
-      <h1 style={styles.title}>About PDF2Quiz</h1>
-      <p style={styles.text}>
-        Welcome to PDF Uploader, your go-to solution for converting PDF
-        documents into interactive quizzes. PDF Uploader is a web application
-        designed to simplify the process of creating quizzes from PDF documents.
-        Whether you're a teacher, student, or professional, our platform offers
-        a convenient solution for converting your educational materials into
-        interactive assessments.
-      </p>
+      <div style={styles.card}>
+        <div style={styles.cardBody}>
+          <h2 style={styles.title}>About PDF2Quiz</h2>
+          <p style={styles.text}>
+            Welcome to PDF Uploader, your go-to solution for converting PDF
+            documents into interactive quizzes. PDF Uploader is a web
+            application designed to simplify the process of creating quizzes
+            from PDF documents. Whether you're a teacher, student, or
+            professional, our platform offers a convenient solution for
+            converting your educational materials into interactive assessments.
+          </p>
+        </div>
+      </div>
 
-      <h2 style={styles.subtitle}>Overview</h2>
-      <p style={styles.text}>
-        The primary functionality of our website is to allow users to upload PDF
-        files and automatically generate quizzes based on the content. This can
-        be particularly useful for educational purposes, enabling teachers to
-        quickly create assessments from existing materials.
-      </p>
+      <div style={styles.card}>
+        <div style={styles.cardBody}>
+          <h2 style={styles.subtitle}>Overview</h2>
+          <p style={styles.text}>
+            The primary functionality of our website is to allow users to upload
+            PDF files and automatically generate quizzes based on the content.
+            This can be particularly useful for educational purposes, enabling
+            teachers to quickly create assessments from existing materials.
+          </p>
+        </div>
+      </div>
 
-      <h2 style={styles.subtitle}>Technologies Used</h2>
-      <p style={styles.text}>
-        Our platform is built using a modern web development stack to ensure
-        high performance, scalability, and ease of use:
-      </p>
-      <ul style={styles.list}>
-        <li>
-          <strong>React</strong>: A powerful JavaScript library for building
-          user interfaces, which ensures a responsive and dynamic user
-          experience.
-        </li>
-        <li>
-          <strong>Node.js</strong>: Our backend is powered by Node.js, providing
-          a robust and scalable server environment to handle file uploads and
-          processing.
-        </li>
-        <li>
-          <strong>Express</strong>: A minimal and flexible Node.js web
-          application framework that facilitates server-side logic and API
-          development.
-        </li>
-        <li>
-          <strong>MongoDB</strong>: A NoSQL database that stores user data, quiz
-          information, and PDF metadata, allowing for efficient data retrieval
-          and management.
-        </li>
-        <li>
-          <strong>PDF.js</strong>: A library for parsing and rendering PDFs,
-          which we use to extract text and images from uploaded files.
-        </li>
-        <li>
-          <strong>Font Awesome</strong>: A popular icon library that enhances
-          the visual appeal of our user interface with a variety of customizable
-          icons.
-        </li>
-      </ul>
+      <div style={styles.card}>
+        <div style={styles.cardBody}>
+          <h2 style={styles.subtitle}>Technologies Used</h2>
+          <p style={styles.text}>
+            Our platform leverages a range of cutting-edge technologies to
+            provide a seamless user experience:
+          </p>
+          <ul style={styles.list}>
+            <li>
+              <strong>React.js</strong>: A powerful JavaScript library for
+              building user interfaces, which ensures a responsive and dynamic
+              user experience.
+            </li>
+            <br/>
+            <li>
+              <strong>FastAPI</strong>: A modern, fast (high-performance), web
+              framework for building APIs with Python 3.7+ based on standard Python
+              type hints.
+            </li>
+            <br />
+            <li>
+              <strong>Amazon S3</strong>: Amazon Simple Storage Service (Amazon S3)
+              is an object storage service that offers industry-leading scalability,
+              data availability, security, and performance.
+            </li>
+            <br />
+            <li>
+              <strong>Amazon EC2</strong>: Amazon Elastic Compute Cloud (Amazon EC2)
+              provides secure and resizable compute capacity in the cloud. It is
+              designed to make web-scale cloud computing easier for developers.
+            </li>
+            <br />
+            <li>
+              <strong>Python</strong>: A versatile programming language known for
+              its simplicity and readability, widely used for web development,
+              scientific computing, artificial intelligence, and more.
+            </li>
+            <br />
+            <li>
+              <strong>Axios</strong>: A promise-based HTTP client for the browser
+              and Node.js, used to make HTTP requests from the browser or Node.js to
+              the server.
+            </li>
+            <br />
+            <li>
+              <strong>OpenAI GPT</strong>: OpenAI's Generative Pre-trained
+              Transformer (GPT) is a state-of-the-art language processing AI model,
+              used for natural language understanding, generation, and many other
+              NLP tasks.
+            </li>
+            <br />
+            <li>
+              <strong>Langchain</strong>: A blockchain platform that provides
+              solutions for language-related applications, such as translation,
+              localization, and language learning.
+            </li>
+          </ul>
+        </div>
+      </div>
 
-      <h2 style={styles.subtitle}>Features</h2>
-      <p style={styles.text}>
-        PDF Uploader offers a range of features designed to streamline the quiz
-        creation process:
-      </p>
-      <ul style={styles.list}>
-        <li>Upload PDFs directly from your device.</li>
-        <li>Automatic quiz generation with customizable question formats.</li>
-        <li>
-          Interactive interface for editing and reviewing generated quizzes.
-        </li>
-        <li>Download quizzes in various formats for offline use.</li>
-        <li>
-          User accounts for saving and managing uploaded PDFs and created
-          quizzes.
-        </li>
-      </ul>
+      {/* Repeat similar structure for other sections */}
 
-      <h2 style={styles.subtitle}>Contact Us</h2>
-      <p style={styles.text}>
-        If you have any questions, feedback, or need support, please don't
-        hesitate to. We're here to help and continuously improve your experience
-        with PDF Uploader.
-      </p>
+      {/* Contact Us Section */}
+      <div style={styles.card}>
+        <div style={styles.cardBody}>
+          <h2 style={styles.subtitle}>Contact Us</h2>
+          <p style={styles.text}>
+            If you have any questions, feedback, or need support, please don't
+            hesitate to. We're here to help and continuously improve your
+            experience with PDF Uploader.
+          </p>
+        </div>
+      </div>
     </div>
   );
 };
@@ -94,27 +113,35 @@ const styles = {
     maxWidth: "800px",
     margin: "0 auto",
   },
+  card: {
+    marginBottom: "1.5rem",
+    border: "1px solid #ccc",
+    borderRadius: "8px",
+    boxShadow: "0 4px 8px 0 rgba(0,0,0,0.2)",
+    backgroundColor: "#fff",
+  },
+  cardBody: {
+    padding: "3rem",
+  },
   title: {
     fontSize: "1.75rem",
-    marginBottom: "1rem",
     color: "#4B0082",
+    marginBottom: "0.5rem",
   },
   subtitle: {
     fontSize: "1.75rem",
-    marginTop: "1.5rem",
-    marginBottom: "1rem",
     color: "#4B0082",
+    marginTop: "1.5rem",
+    marginBottom: "0.5rem",
   },
   text: {
     fontSize: "1rem",
     lineHeight: "1.6",
     color: "#333",
-    textAlign: "justify", // Text alignment set to justify
-    marginRight: "0.5rem", // Adding margin to the right side of paragraphs
   },
   list: {
     paddingLeft: "1.5rem",
-    listStyleType: "disc",
+    listStyleType: "none",
   },
 };
 

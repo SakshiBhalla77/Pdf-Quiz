@@ -79,8 +79,8 @@ const PDFUpload = ({ onFileAccepted }) => {
   };
 
   return (
-    <div>
-      {!selectedFile && ( // Conditionally render the drop zone
+    <div> 
+      {!selectedFile && (
         <div
           style={{
             ...styles.dropZone,
@@ -104,7 +104,7 @@ const PDFUpload = ({ onFileAccepted }) => {
           />
           <p>
             {selectedFile
-              ? `Selected file: ${selectedFile.name}` // Render the file name if selected
+              ? `Selected file: ${selectedFile.name}`
               : "Drag and drop a PDF file here, or click to select a file"}
           </p>
         </div>
@@ -123,8 +123,7 @@ const PDFUpload = ({ onFileAccepted }) => {
           </button>
           <button style={styles.button} onClick={handleCancel}>
             Cancel
-          </button>{" "}
-          {/* Upload button */}
+          </button>
         </div>
       )}
     </div>
@@ -133,14 +132,13 @@ const PDFUpload = ({ onFileAccepted }) => {
 
 const styles = {
   dropZone: {
-    width: "80%",
-    height: "300px",
+    width: "100%",
+    height: "50vh",
     border: "2px dashed #4B0082",
     borderRadius: "10px",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    //textAlign: "center",
     margin: "20px auto",
     padding: "20px",
     cursor: "pointer",
