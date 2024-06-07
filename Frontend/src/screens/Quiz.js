@@ -77,8 +77,6 @@ const Quiz = () => {
           border: "none",
           padding: "1rem 2rem",
           fontSize: "1rem",
-          //borderRadius: "5px",
-          border: "none",
           cursor: "pointer",
           marginTop: "20px",
         }}
