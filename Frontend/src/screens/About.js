@@ -121,7 +121,7 @@ const styles = {
     backgroundColor: "#fff",
   },
   cardBody: {
-    padding: "3rem",
+    padding: "1.5rem",
   },
   title: {
     fontSize: "1.75rem",
