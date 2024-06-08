@@ -15,21 +15,16 @@ const Quiz = () => {
   const handleCheckboxChange = (questionId, optionId) => {
     setSelectedOptions((prevState) => {
       const updatedOptions = { ...prevState };
-      // If the option is already selected, deselect it
       if (updatedOptions[questionId] === optionId) {
         delete updatedOptions[questionId];
       } else {
-        // If the option is not selected, select it
         updatedOptions[questionId] = optionId;
       }
       return updatedOptions;
     });
-    // Update answers correctness only if the quiz has been submitted
     if (submitted) {
       updateAnswersCorrectness();
     }
-    // Prevent default checkbox behavior
-    return false;
   };
 
   const updateAnswersCorrectness = () => {
@@ -48,7 +43,7 @@ const Quiz = () => {
 
   const calculateScore = () => {
     let score = 0;
-    updateAnswersCorrectness(); // Update answers correctness before calculating score
+    updateAnswersCorrectness();
     questions.forEach((question) => {
       if (
         selectedOptions[question.question_id] === question.correct_option_id
@@ -71,19 +66,9 @@ const Quiz = () => {
               marginBottom: "20px",
               display: "flex",
               flexDirection: "column",
-              //width: "100%",
             }}
           >
-            <div
-            // style={{
-            //   marginBottom: "20px",
-            //   background: "#fff",
-            //   padding: "20px",
-            //   borderRadius: "10px",
-            //   boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-            //   width: "fit-content",
-            // }}
-            >
+            <div>
               <h3>{question.question_text}</h3>
             </div>
 
@@ -97,11 +82,11 @@ const Quiz = () => {
 
               if (isSubmitted) {
                 if (isSelected && isCorrect) {
-                  backgroundColor = "#DCF3E9"; // Highlight correct and selected option in green
+                  backgroundColor = "#DCF3E9";
                 } else if (isSelected && !isCorrect) {
-                  backgroundColor = "#FFE4E7"; // Highlight incorrect and selected option in red
+                  backgroundColor = "#FFE4E7"; 
                 } else if (!isSelected && isCorrect) {
-                  backgroundColor = "#DCF3E9"; // Highlight correct but not selected option in green
+                  backgroundColor = "#DCF3E9"; 
                 }
               }
 
@@ -109,13 +94,12 @@ const Quiz = () => {
                 <div
                   key={option.option_id}
                   style={{
-                    border: "1px solid #ccc", // Border style
-                    borderRadius: "19px", // Rounded corners
-                    padding: "15px", // Increased padding for spacing
-                    marginBottom: "15px", // Spacing between options
-                    width: "fit-content", // Adjust the width to fit the content
+                    border: "1px solid #ccc", 
+                    borderRadius: "19px",
+                    padding: "15px", 
+                    marginBottom: "15px", 
+                    width: "fit-content", 
                     backgroundColor,
-                    padding: "13px",
                   }}
                 >
                   <label
@@ -123,7 +107,6 @@ const Quiz = () => {
                       fontSize: "1.1rem",
                       display: "flex",
                       alignItems: "center",
-                      //width: "100%",
                     }}
                   >
                     <span style={{ width: "200px", display: "inline-block" }}>
@@ -147,6 +130,11 @@ const Quiz = () => {
                 </div>
               );
             })}
+            {submitted && (
+              <p style={{ color: answersCorrectness[question.question_id] ? "green" : "red" }}>
+                {answersCorrectness[question.question_id] ? "Correct" : "Incorrect"}
+              </p>
+            )}
           </div>
         ))}
       </form>
