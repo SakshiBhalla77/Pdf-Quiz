@@ -134,10 +134,10 @@ const styles = {
     width: "300px",
   },
   profileImage: {
-    width: "150px",
-    height: "150px",
+    width: "170px",
+    height: "170px",
     borderRadius: "50%",
-    marginBottom: "1rem",
+    marginBottom: "0.5rem",
   },
   content: {
     textAlign: "center",
