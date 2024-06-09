@@ -89,10 +89,6 @@ const About = () => {
           </ul>
         </div>
       </div>
-
-      {/* Repeat similar structure for other sections */}
-
-      {/* Contact Us Section */}
       <div style={styles.card}>
         <div style={styles.cardBody}>
           <h2 style={styles.subtitle}>Contact Us</h2>

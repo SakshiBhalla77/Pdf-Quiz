@@ -45,8 +45,8 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/quiz" element={<Quiz />} />
-            <Route path="/loading" element={<LoadingPage />} /> {/* Add this route */}
-            <Route path="*" element={<Navigate to="/" />} /> {/* Redirect to home for invalid routes */}
+            <Route path="/loading" element={<LoadingPage />} />
+            <Route path="*" element={<Navigate to="/" />} /> 
           </Routes>
         </main>
         <Footer />
@@ -65,7 +65,6 @@ const styles = {
     flex: '1',
     display: 'flex',
     justifyContent: 'center',
-    // alignItems: 'center',
   },
   contentContainer: {
     display: 'flex',

@@ -10,7 +10,7 @@ const CancelButton = ({ onClick }) => {
 
 const styles = {
   button: {
-    marginLeft: "10px", // Add some spacing between buttons
+    marginLeft: "10px",
   },
 };
 

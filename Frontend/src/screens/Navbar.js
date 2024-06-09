@@ -13,7 +13,6 @@ const Navbar = () => {
   return (
     <nav style={styles.navbar}>
       <div style={styles.logoContainer}>
-        {/* <img src="logo.png" alt="Logo" style={styles.logo} /> */}
         <h1 style={styles.navTitle}>PDF2Quiz</h1>
       </div>
       <ul style={styles.navLinks}>
