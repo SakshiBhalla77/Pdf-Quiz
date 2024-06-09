@@ -1,11 +1,9 @@
-// src/Contact.js
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 const Contact = () => {
-  // Define an array of objects containing the details of each person
   const teamMembers = [
     {
       name: "Karan Kumar",
@@ -19,7 +17,7 @@ const Contact = () => {
     },
     {
       name: "Sakshi Bhalla",
-      role: "Frontend Developer",
+      role: "Design lead, Frontend Developer",
       linkedin: "https://www.linkedin.com/in/sakshibhalla0/s",
       github: "https://github.com/SakshiBhalla77",
       email: "sakshibhalla27@gmail.com",
@@ -28,23 +26,24 @@ const Contact = () => {
     },
     {
       name: "Aryan Khatri",
-      role: "Backend Developer",
+      role: "Frontend Developer",
       linkedin: "https://www.linkedin.com/in/aryan-khatri2023/",
       github: "https://github.com/ARYAN-khatri83",
-      email: "",
+      email: "aryan3kkhatri@gmail.com",
       imageUrl:
         "https://media.licdn.com/dms/image/C5603AQFa_GWIC-cMYg/profile-displayphoto-shrink_800_800/0/1661828217376?e=1723680000&v=beta&t=LVre7Xcpj8BS-h-axvekCkOBVIty7Meuv6o0sP77Atk",
     },
     {
       name: "Shashank Dubey",
-      role: "Backend Developer",
+      role: "Technical Lead, Fullstack Developer",
       linkedin: "https://www.linkedin.com/in/shashank-dubey-b3684a21b/",
       github: "https://github.com/CorruptEntity0982",
-      email: "",
+      email: "shashank02.dubey@gmail.com",
       imageUrl:
         "https://media.licdn.com/dms/image/D5603AQHGF0eCFiWPgA/profile-displayphoto-shrink_800_800/0/1690141377080?e=1723075200&v=beta&t=iO4tbgd0FUHxNb91WKds-VEAmh5K0GM8u9TSNEWSDUE",
     },
   ];
+  
 
   return (
     <div style={styles.container}>
@@ -114,43 +113,43 @@ const styles = {
   },
   teamContainer: {
     display: "flex",
-    flexDirection: "column", // Stack items vertically
-    alignItems: "center", // Center items horizontally
+    flexDirection: "column",
+    alignItems: "center", 
     marginTop: "2rem",
   },
   memberContainer: {
     textAlign: "center",
-    marginBottom: "2rem", // Add some space between each member
+    marginBottom: "2rem", 
   },
   box: {
-    boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)", // Add shadow around the box
+    boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)", 
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
-    padding: "4rem", // Add padding to create bigger boxes
-    margin: "1rem", // Add margin for spacing between boxes
-    borderRadius: "15px", // Add border radius for rounded corners
+    padding: "4rem", 
+    margin: "1rem", 
+    borderRadius: "15px",
+    width: "600px",
   },
   content: {
-    flex: "1", // Take up remaining space
-    textAlign: "left", // Align content to the left
+    flex: "1",
+    textAlign: "left", 
     marginRight: "2rem",
   },
   profileImage: {
     width: "200px",
     height: "200px",
     borderRadius: "50%",
-    marginLeft: "3rem", // Add space between text and image
+    marginLeft: "3rem", 
   },
   iconLink: {
     margin: "0.5rem ",
-    //color: "#0A66C2", // Default color for the icons
   },
 
   name: {
-    fontWeight: "bold", // Make the name bold
-    marginBottom: "1rem", // Add space below the name
-    fontSize: "1.5rem", // Increase the font size of the name
+    fontWeight: "bold",
+    marginBottom: "1rem", 
+    fontSize: "1.5rem",
   },
 };
 

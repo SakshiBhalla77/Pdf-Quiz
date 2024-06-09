@@ -44,7 +44,7 @@ function App() {
             />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/quiz" element={<Quiz />} /> {/* Add Quiz route */}
+            <Route path="/quiz" element={<Quiz />} /> 
           </Routes>
         </main>
         <Footer />

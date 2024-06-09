@@ -1,4 +1,3 @@
-// src/MainContent.js
 import React from "react";
 
 function MainContent() {
@@ -16,10 +15,10 @@ const styles = {
     marginTop: "4.2rem",
   },
   heading: {
-    fontSize: "2rem", // Font size for the header
+    fontSize: "2rem", 
   },
   paragraph: {
-    fontSize: "1.4rem", // Font size for the paragraph
+    fontSize: "1.4rem",
   },
 };
 
