@@ -33,7 +33,7 @@ const Contact = () => {
       github: "https://github.com/ARYAN-khatri83",
       email: "",
       imageUrl:
-        "https://media.licdn.com/dms/image/D5635AQEuS5fuioC4ew/profile-framedphoto-shrink_800_800/0/1692049047210?e=1718470800&v=beta&t=y62_U5lfgAV-LiczdKs0vt9Zx_ph-xpeL3YvsAoTQWM",
+        "https://media.licdn.com/dms/image/C5603AQFa_GWIC-cMYg/profile-displayphoto-shrink_800_800/0/1661828217376?e=1723680000&v=beta&t=LVre7Xcpj8BS-h-axvekCkOBVIty7Meuv6o0sP77Atk",
     },
     {
       name: "Shashank Dubey",
