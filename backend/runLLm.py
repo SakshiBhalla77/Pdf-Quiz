@@ -77,7 +77,7 @@ Example format of the response that is expected:
     "correct_option_id": 2
   },
 ]
-Strictly adhere to this format only.
+Strictly adhere to this format only. Give me the output in a single line, Do not return any other text apart for how the response is expected.
 """
 response = chain.run(prompt)
 print(response)
