@@ -11,7 +11,6 @@ const Contact = () => {
       linkedin: "https://www.linkedin.com/in/karan-kumar-dev/",
       github: "https://github.com/kumar-karan",
       email: "karan.8080dev@gmail.com",
-
       imageUrl:
         "https://media.licdn.com/dms/image/D4E03AQFGeqAvTOXAIA/profile-displayphoto-shrink_800_800/0/1670087554519?e=1723075200&v=beta&t=B6HrEtOfWiD2F3HCkJsRW-_KcVpxG-ySH8CxOKoP1Uo",
     },
@@ -43,7 +42,6 @@ const Contact = () => {
         "https://media.licdn.com/dms/image/D5603AQHGF0eCFiWPgA/profile-displayphoto-shrink_800_800/0/1690141377080?e=1723075200&v=beta&t=iO4tbgd0FUHxNb91WKds-VEAmh5K0GM8u9TSNEWSDUE",
     },
   ];
-  
 
   return (
     <div style={styles.container}>
@@ -52,6 +50,11 @@ const Contact = () => {
         {teamMembers.map((member, index) => (
           <div key={index} style={styles.memberContainer}>
             <div style={styles.box}>
+              <img
+                src={member.imageUrl}
+                alt={member.name}
+                style={styles.profileImage}
+              />
               <div style={styles.content}>
                 <div style={styles.nameRole}>
                   <p style={styles.name}>{member.name}</p>
@@ -60,44 +63,41 @@ const Contact = () => {
 
                 <div style={styles.contact}>
                   <h3>Contact Me At</h3>
-                  <a
-                    href={member.linkedin}
-                    style={styles.iconLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <FontAwesomeIcon
-                      icon={faLinkedin}
-                      size="2x"
-                      style={{ color: "#0A66C2" }}
-                    />
-                  </a>
-                  <a
-                    href={member.github}
-                    style={styles.iconLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <FontAwesomeIcon
-                      icon={faGithub}
-                      size="2x"
-                      style={{ color: "black" }}
-                    />
-                  </a>
-                  <a href={`mailto:${member.email}`} style={styles.iconLink}>
-                    <FontAwesomeIcon
-                      icon={faEnvelope}
-                      size="2x"
-                      style={{ color: "#3E65CF" }}
-                    />
-                  </a>
+                  <div style={styles.iconsContainer}>
+                    <a
+                      href={member.linkedin}
+                      style={styles.iconLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FontAwesomeIcon
+                        icon={faLinkedin}
+                        size="2x"
+                        style={{ color: "#0A66C2" }}
+                      />
+                    </a>
+                    <a
+                      href={member.github}
+                      style={styles.iconLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FontAwesomeIcon
+                        icon={faGithub}
+                        size="2x"
+                        style={{ color: "black" }}
+                      />
+                    </a>
+                    <a href={`mailto:${member.email}`} style={styles.iconLink}>
+                      <FontAwesomeIcon
+                        icon={faEnvelope}
+                        size="2x"
+                        style={{ color: "#3E65CF" }}
+                      />
+                    </a>
+                  </div>
                 </div>
               </div>
-              <img
-                src={member.imageUrl}
-                alt={member.name}
-                style={styles.profileImage}
-              />
             </div>
           </div>
         ))}
@@ -113,43 +113,51 @@ const styles = {
   },
   teamContainer: {
     display: "flex",
-    flexDirection: "column",
-    alignItems: "center", 
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "center",
+    gap: "2rem",
     marginTop: "2rem",
   },
   memberContainer: {
     textAlign: "center",
-    marginBottom: "2rem", 
+    marginBottom: "2rem",
   },
   box: {
-    boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)", 
+    boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)",
     display: "flex",
+    flexDirection: "column",
     alignItems: "center",
-    justifyContent: "space-between",
-    padding: "4rem", 
-    margin: "1rem", 
+    padding: "2rem",
+    margin: "1rem",
     borderRadius: "15px",
-    width: "600px",
-  },
-  content: {
-    flex: "1",
-    textAlign: "left", 
-    marginRight: "2rem",
+    width: "300px",
   },
   profileImage: {
-    width: "200px",
-    height: "200px",
+    width: "150px",
+    height: "150px",
     borderRadius: "50%",
-    marginLeft: "3rem", 
+    marginBottom: "1rem",
+  },
+  content: {
+    textAlign: "center",
+    marginTop: "1rem",
+  },
+  nameRole: {
+    marginBottom: "1rem",
+  },
+  iconsContainer: {
+    display: "flex",
+    justifyContent: "center",
+    gap: "1rem",
   },
   iconLink: {
-    margin: "0.5rem ",
+    margin: "0.5rem",
   },
-
   name: {
     fontWeight: "bold",
-    marginBottom: "1rem", 
-    fontSize: "1.5rem",
+    marginBottom: "0.5rem",
+    fontSize: "1.2rem",
   },
 };
 
