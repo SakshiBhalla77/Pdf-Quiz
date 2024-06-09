@@ -77,12 +77,12 @@ Example format of the response that is expected:
     "correct_option_id": 2
   },
 ]
-Strictly adhere to this format only, give the response in exactly one line, the need for '\n' is not required.
+Strictly adhere to this format only, give the response in exactly one line.
 """
 response = chain.run(prompt)
 print(response)
 store_path= "/Users/shashankdubey/PDF2Quiz/Frontend/src/response"
-response_json_path = os.path.join(store_path, 'response.txt')
+response_json_path = os.path.join(store_path, 'response.json')
 with open(response_json_path, 'w') as json_file:
     json.dump(response, json_file, indent=4)
 os.remove(first_pdf_path)
