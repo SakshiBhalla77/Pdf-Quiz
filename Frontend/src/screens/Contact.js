@@ -2,6 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import "./Contact.css"; // Import the CSS file
 
 const Contact = () => {
   const teamMembers = [
@@ -49,7 +50,7 @@ const Contact = () => {
       <div style={styles.teamContainer}>
         {teamMembers.map((member, index) => (
           <div key={index} style={styles.memberContainer}>
-            <div style={styles.box}>
+            <div className="box">
               <img
                 src={member.imageUrl}
                 alt={member.name}
@@ -137,7 +138,7 @@ const styles = {
     width: "170px",
     height: "170px",
     borderRadius: "50%",
-    marginBottom: "0.5rem",
+    marginBottom: "rem",
   },
   content: {
     textAlign: "center",
