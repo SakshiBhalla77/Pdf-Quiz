@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import questionsData from "../components/questions.json"
+//import questionsData from "/Users/shashankdubey/PDF2Quiz/Frontend/src/response/response.json"
 
 const Quiz = () => {
   const [questions, setQuestions] = useState([]);
