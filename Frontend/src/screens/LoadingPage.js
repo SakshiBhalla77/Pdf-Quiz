@@ -1,13 +1,7 @@
-import React, { useState, useEffect } from "react";
-import questionsData from "../components/questions.json";
+import React from 'react';
 
 const LoadingPage = () => {
-  
-  return (
-    <div>
-        
-    </div>
-  );
+  return <div>Loading...</div>;
 };
 
 export default LoadingPage;

@@ -1,6 +1,5 @@
-// src/App.js
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import Navbar from './screens/Navbar';
 import MainContent from './screens/MainContent';
 import PDFUpload from './screens/PDFUpload';
@@ -8,7 +7,8 @@ import UploadButton from './components/UploadButton';
 import Footer from './components/Footer';
 import About from './screens/About';
 import Contact from './screens/Contact';
-import Quiz from './screens/Quiz'; // Import the Quiz component
+import Quiz from './screens/Quiz';
+import LoadingPage from './screens/LoadingPage'; 
 import './index.css';
 
 function App() {
@@ -44,7 +44,9 @@ function App() {
             />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/quiz" element={<Quiz />} /> 
+            <Route path="/quiz" element={<Quiz />} />
+            <Route path="/loading" element={<LoadingPage />} /> {/* Add this route */}
+            <Route path="*" element={<Navigate to="/" />} /> {/* Redirect to home for invalid routes */}
           </Routes>
         </main>
         <Footer />

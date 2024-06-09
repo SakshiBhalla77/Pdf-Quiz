@@ -1,11 +1,13 @@
 import React, { useRef, useState } from "react";
 import axios from "axios";
+import { useNavigate } from 'react-router-dom';
 
 const PDFUpload = ({ onFileAccepted }) => {
   const [dragOver, setDragOver] = useState(false);
   const [selectedFile, setSelectedFile] = useState(null);
   const [pdfSrc, setPdfSrc] = useState(null);
   const fileInputRef = useRef(null);
+  const navigate = useNavigate(); 
 
   const uploadFile = async () => {
     if (!selectedFile) {
@@ -15,20 +17,17 @@ const PDFUpload = ({ onFileAccepted }) => {
 
     const formData = new FormData();
     formData.append("file", selectedFile);
+    navigate("/loading"); 
 
     try {
-      const response = await axios.post(
-        "http://localhost:8000/upload",
-        formData,
-        {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
-        }
-      );
-      console.log("File uploaded successfully", response.data);
+      await axios.post("http://localhost:8000/upload", formData, {
+        headers: { "Content-Type": "multipart/form-data" },
+      });
+      console.log("File uploaded successfully");
+      navigate("/quiz");
     } catch (error) {
       console.error("Error uploading file", error);
+      navigate("/loading");
     }
   };
 
