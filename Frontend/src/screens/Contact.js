@@ -1,5 +1,8 @@
 // src/Contact.js
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 const Contact = () => {
   // Define an array of objects containing the details of each person
@@ -9,6 +12,8 @@ const Contact = () => {
       role: "Backend Developer",
       linkedin: "https://www.linkedin.com/in/karan-kumar-dev/",
       github: "https://github.com/kumar-karan",
+      email: "karan.8080dev@gmail.com",
+
       imageUrl:
         "https://media.licdn.com/dms/image/D4E03AQFGeqAvTOXAIA/profile-displayphoto-shrink_800_800/0/1670087554519?e=1723075200&v=beta&t=B6HrEtOfWiD2F3HCkJsRW-_KcVpxG-ySH8CxOKoP1Uo",
     },
@@ -17,6 +22,7 @@ const Contact = () => {
       role: "Frontend Developer",
       linkedin: "https://www.linkedin.com/in/sakshibhalla0/s",
       github: "https://github.com/SakshiBhalla77",
+      email: "sakshibhalla27@gmail.com",
       imageUrl:
         "https://media.licdn.com/dms/image/D5603AQFD4PL2oYUeMQ/profile-displayphoto-shrink_800_800/0/1703091450612?e=1723075200&v=beta&t=ZpuQfUz_ZUJMxJnLhWLeaydv-kiJS3X2kPE25YwuINo",
     },
@@ -25,6 +31,7 @@ const Contact = () => {
       role: "Backend Developer",
       linkedin: "https://www.linkedin.com/in/aryan-khatri2023/",
       github: "https://github.com/ARYAN-khatri83",
+      email: "",
       imageUrl:
         "https://media.licdn.com/dms/image/D5635AQEuS5fuioC4ew/profile-framedphoto-shrink_800_800/0/1692049047210?e=1718470800&v=beta&t=y62_U5lfgAV-LiczdKs0vt9Zx_ph-xpeL3YvsAoTQWM",
     },
@@ -33,6 +40,7 @@ const Contact = () => {
       role: "Backend Developer",
       linkedin: "https://www.linkedin.com/in/shashank-dubey-b3684a21b/",
       github: "https://github.com/CorruptEntity0982",
+      email: "",
       imageUrl:
         "https://media.licdn.com/dms/image/D5603AQHGF0eCFiWPgA/profile-displayphoto-shrink_800_800/0/1690141377080?e=1723075200&v=beta&t=iO4tbgd0FUHxNb91WKds-VEAmh5K0GM8u9TSNEWSDUE",
     },
@@ -46,28 +54,44 @@ const Contact = () => {
           <div key={index} style={styles.memberContainer}>
             <div style={styles.box}>
               <div style={styles.content}>
-                <p style={styles.name}>{member.name}</p>
-                <p>{member.role}</p>
-                <div style={styles.links}>
+                <div style={styles.nameRole}>
+                  <p style={styles.name}>{member.name}</p>
+                  <p>{member.role}</p>
+                </div>
+
+                <div style={styles.contact}>
+                  <h3>Contact Me At</h3>
                   <a
                     href={member.linkedin}
-                    style={styles.button}
+                    style={styles.iconLink}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    LinkedIn
+                    <FontAwesomeIcon
+                      icon={faLinkedin}
+                      size="2x"
+                      style={{ color: "#0A66C2" }}
+                    />
                   </a>
-                  <br />
-                  <div style={{ marginTop: "24px" }}>
-                    <a
-                      href={member.github}
-                      style={styles.button}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      GitHub
-                    </a>
-                  </div>
+                  <a
+                    href={member.github}
+                    style={styles.iconLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FontAwesomeIcon
+                      icon={faGithub}
+                      size="2x"
+                      style={{ color: "black" }}
+                    />
+                  </a>
+                  <a href={`mailto:${member.email}`} style={styles.iconLink}>
+                    <FontAwesomeIcon
+                      icon={faEnvelope}
+                      size="2x"
+                      style={{ color: "#3E65CF" }}
+                    />
+                  </a>
                 </div>
               </div>
               <img
@@ -102,6 +126,7 @@ const styles = {
     boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)", // Add shadow around the box
     display: "flex",
     alignItems: "center",
+    justifyContent: "space-between",
     padding: "4rem", // Add padding to create bigger boxes
     margin: "1rem", // Add margin for spacing between boxes
     borderRadius: "15px", // Add border radius for rounded corners
@@ -109,24 +134,17 @@ const styles = {
   content: {
     flex: "1", // Take up remaining space
     textAlign: "left", // Align content to the left
+    marginRight: "2rem",
   },
   profileImage: {
     width: "200px",
     height: "200px",
     borderRadius: "50%",
-    marginLeft: "3.5rem", // Add space between text and image
+    marginLeft: "3rem", // Add space between text and image
   },
-  links: {
-    marginTop: "0.5rem",
-  },
-  button: {
-    backgroundColor: "white", // White background color for the button
-    color: "#0A66C2", // Blue text color
-    padding: "0.5rem 1.5rem", // Padding for the button
-    borderRadius: "5px", // Rounded corners for the button
-    textDecoration: "none", // Remove underline from the text
-    //border: "1px solid #001", // Black border
-    boxShadow: "0px 0px 5px rgba(0, 0, 0, 0.3)", // Black shadow
+  iconLink: {
+    margin: "0.5rem ",
+    //color: "#0A66C2", // Default color for the icons
   },
 
   name: {
