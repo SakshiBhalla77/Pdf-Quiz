@@ -7,7 +7,7 @@ const Contact = () => {
   const teamMembers = [
     {
       name: "Karan Kumar",
-      role: "Backend Developer",
+      role: "Frontend Developer",
       linkedin: "https://www.linkedin.com/in/karan-kumar-dev/",
       github: "https://github.com/kumar-karan",
       email: "karan.8080dev@gmail.com",
