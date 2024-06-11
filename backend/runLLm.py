@@ -80,7 +80,6 @@ Example format of the response that is expected:
 Strictly adhere to this format only. Give me the output in a single line, Do not return any other text apart for how the response is expected.
 """
 response = chain.run(prompt)
-print(response)
 store_path= "/Users/shashankdubey/PDF2Quiz/Frontend/src/response"
 response_json_path = os.path.join(store_path, 'response.txt')
 with open(response_json_path, 'w') as json_file:

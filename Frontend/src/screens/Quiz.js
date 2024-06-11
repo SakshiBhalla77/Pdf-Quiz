@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import questionsData from "../components/questions.json"
-//import questionsData from "/Users/shashankdubey/PDF2Quiz/Frontend/src/response/response.json"
+//import rawQuestionsData from "../components/questions.json";
+import rawQuestionsData from "/Users/shashankdubey/PDF2Quiz/Frontend/src/response/formattedQuestions.json"
 
 const Quiz = () => {
   const [questions, setQuestions] = useState([]);
@@ -10,7 +10,7 @@ const Quiz = () => {
   const [submitted, setSubmitted] = useState(false);
 
   useEffect(() => {
-    setQuestions(questionsData);
+    setQuestions(rawQuestionsData);
   }, []);
 
   const handleCheckboxChange = (questionId, optionId) => {
@@ -31,9 +31,7 @@ const Quiz = () => {
   const updateAnswersCorrectness = () => {
     const answers = {};
     questions.forEach((question) => {
-      if (
-        selectedOptions[question.question_id] === question.correct_option_id
-      ) {
+      if (selectedOptions[question.question_id] === question.correct_option_id) {
         answers[question.question_id] = true;
       } else {
         answers[question.question_id] = false;
@@ -46,9 +44,7 @@ const Quiz = () => {
     let score = 0;
     updateAnswersCorrectness();
     questions.forEach((question) => {
-      if (
-        selectedOptions[question.question_id] === question.correct_option_id
-      ) {
+      if (selectedOptions[question.question_id] === question.correct_option_id) {
         score++;
       }
     });
@@ -74,8 +70,7 @@ const Quiz = () => {
             </div>
 
             {question.options.map((option) => {
-              const isSelected =
-                selectedOptions[question.question_id] === option.option_id;
+              const isSelected = selectedOptions[question.question_id] === option.option_id;
               const isCorrect = option.option_id === question.correct_option_id;
               const isSubmitted = submitted;
 
@@ -85,9 +80,9 @@ const Quiz = () => {
                 if (isSelected && isCorrect) {
                   backgroundColor = "#DCF3E9";
                 } else if (isSelected && !isCorrect) {
-                  backgroundColor = "#FFE4E7"; 
+                  backgroundColor = "#FFE4E7";
                 } else if (!isSelected && isCorrect) {
-                  backgroundColor = "#DCF3E9"; 
+                  backgroundColor = "#DCF3E9";
                 }
               }
 
@@ -95,11 +90,11 @@ const Quiz = () => {
                 <div
                   key={option.option_id}
                   style={{
-                    border: "1px solid #ccc", 
+                    border: "1px solid #ccc",
                     borderRadius: "19px",
-                    padding: "15px", 
-                    marginBottom: "15px", 
-                    width: "fit-content", 
+                    padding: "15px",
+                    marginBottom: "15px",
+                    width: "fit-content",
                     backgroundColor,
                   }}
                 >
@@ -116,12 +111,7 @@ const Quiz = () => {
                     <input
                       type="checkbox"
                       checked={isSelected}
-                      onChange={() =>
-                        handleCheckboxChange(
-                          question.question_id,
-                          option.option_id
-                        )
-                      }
+                      onChange={() => handleCheckboxChange(question.question_id, option.option_id)}
                       style={{
                         marginLeft: "150px",
                         transform: "scale(1.5)",

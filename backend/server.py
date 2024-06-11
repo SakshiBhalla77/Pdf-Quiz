@@ -28,12 +28,13 @@ async def upload_file(file: UploadFile = File(...)):
         content = await file.read()
         await out_file.write(content)
     subprocess.run(['python3', 'runLLm.py'])
+    subprocess.run(['python3', 'formatJSON.py'])
 
     return {"info": f"file '{file.filename}' saved at '{file_location}'"}
 
 @app.get("/response")
 async def get_response():
-    response_json_path = os.path.join(UPLOAD_DIRECTORY, 'response.json')
+    response_json_path = os.path.join(UPLOAD_DIRECTORY, 'response.txt')
     if os.path.exists(response_json_path):
         with open(response_json_path, 'r') as json_file:
             response = json.load(json_file)

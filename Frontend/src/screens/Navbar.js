@@ -5,7 +5,6 @@ import {
   faHome,
   faAddressBook,
   faEnvelope,
-  faQuestionCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import "../index.css";
 
@@ -29,11 +28,6 @@ const Navbar = () => {
         <li style={styles.navItem}>
           <Link to="/contact" className="nav-link">
             <FontAwesomeIcon icon={faEnvelope} /> Contact
-          </Link>
-        </li>
-        <li style={styles.navItem}>
-          <Link to="/quiz" className="nav-link">
-            <FontAwesomeIcon icon={faQuestionCircle} /> Quiz
           </Link>
         </li>
       </ul>
