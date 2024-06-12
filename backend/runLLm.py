@@ -8,9 +8,11 @@ from langchain.vectorstores import Chroma
 from langchain.chains import RetrievalQA
 from langchain.chat_models import ChatOpenAI
 
-os.environ['OPENAI_API_KEY'] = "sk-proj-6BWDTDaGs4ulJSkT9S2sT3BlbkFJYKsskXdic6VLfHsDpvFJ"
+os.environ['OPENAI_API_KEY'] = "sk-proj-36xUsrcCmt3sBIOmTHaXT3BlbkFJ1t2nlWKk3yse5Es9LCIS"
 
-folder_path = '/Users/shashankdubey/PDF2Quiz/backend/uploads'
+current_dir = os.path.dirname(os.path.abspath(__file__))
+
+folder_path = os.path.join(current_dir, 'uploads')
 files = os.listdir(folder_path)
 pdf_files = [file for file in files if file.lower().endswith('.pdf')]
 if pdf_files:
@@ -28,7 +30,8 @@ def getTextFromPDF() -> str:
             page = pdf_reader.pages[i]
             pageText = page.extract_text()
             convertedText += pageText
-        file_path = '/Users/shashankdubey/PDF2Quiz/backend/uploads/loader.txt'
+        
+        file_path = os.path.join(folder_path, 'loader.txt')
         with open(file_path, "w+") as file:
             file.write(convertedText)
             file.seek(0)
@@ -50,7 +53,7 @@ Return a response in JSON format. Each JSON object should contain the following 
 - question_id
 - question_text
 - options (list of options)
-- correcrt_option_id (the most contextually correct answer)
+- correct_option_id (the most contextually correct answer)
 
 Example format of the response that is expected:
 [
@@ -80,9 +83,11 @@ Example format of the response that is expected:
 Strictly adhere to this format only. Give me the output in a single line, Do not return any other text apart for how the response is expected.
 """
 response = chain.run(prompt)
-store_path= "/Users/shashankdubey/PDF2Quiz/Frontend/src/response"
+project_root = os.path.abspath(os.path.join(current_dir, '..'))
+store_path = os.path.join(project_root, 'Frontend', 'src', 'response')
 response_json_path = os.path.join(store_path, 'response.txt')
 with open(response_json_path, 'w') as json_file:
     json.dump(response, json_file, indent=4)
+
 os.remove(first_pdf_path)
-os.remove('/Users/shashankdubey/PDF2Quiz/backend/uploads/loader.txt')
+os.remove(os.path.join(folder_path, 'loader.txt'))

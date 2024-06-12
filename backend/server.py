@@ -15,20 +15,25 @@ app.add_middleware(
     allow_headers=["*"],  
 )
 
-UPLOAD_DIRECTORY = "/Users/shashankdubey/PDF2Quiz/backend/uploads"
+current_dir = os.path.dirname(os.path.abspath(__file__))
+UPLOAD_DIRECTORY = os.path.join(current_dir, 'uploads')
 
 if not os.path.exists(UPLOAD_DIRECTORY):
     os.makedirs(UPLOAD_DIRECTORY)
 
 @app.post("/upload")
 async def upload_file(file: UploadFile = File(...)):
-    file_location = f"{UPLOAD_DIRECTORY}/{file.filename}"
+    file_location = os.path.join(UPLOAD_DIRECTORY, file.filename)
     
     async with aiofiles.open(file_location, 'wb') as out_file:
         content = await file.read()
         await out_file.write(content)
-    subprocess.run(['python3', 'runLLm.py'])
-    subprocess.run(['python3', 'formatJSON.py'])
+
+    run_llm_path = os.path.join(current_dir, 'runLLm.py')
+    format_json_path = os.path.join(current_dir, 'formatJSON.py')
+    
+    subprocess.run(['python3', run_llm_path])
+    subprocess.run(['python3', format_json_path])
 
     return {"info": f"file '{file.filename}' saved at '{file_location}'"}
 

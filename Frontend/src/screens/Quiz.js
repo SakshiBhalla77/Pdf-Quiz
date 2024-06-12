@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 //import rawQuestionsData from "../components/questions.json";
-import rawQuestionsData from "/Users/shashankdubey/PDF2Quiz/Frontend/src/response/formattedQuestions.json"
+import rawQuestionsData from "../response/formattedQuestions.json";
+
 
 const Quiz = () => {
   const [questions, setQuestions] = useState([]);
