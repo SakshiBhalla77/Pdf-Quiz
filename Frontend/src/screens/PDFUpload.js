@@ -128,17 +128,22 @@ const PDFUpload = ({ onFileAccepted }) => {
             height="500px"
             title="Uploaded PDF"
           ></iframe>
-          <div style={{ display: "flex", gap: "10px", justifyContent: "center" }}>
-            <button className="button" onClick={uploadFile}>
+          <div className="bar" style={{ display: "flex", gap: "10px", justifyContent: "center" }}>
+            <h4 onClick={uploadFile}><button>Upload</button></h4>
+            <h4 onClick={handleCancel}><button>Cancel</button></h4>
+
+
+            {/* <button className="button" onClick={uploadFile}>
               Upload
             </button>
             <button className="button" onClick={handleCancel}>
               Cancel
-            </button>
+            </button> */}
           </div>
         </div>
-      )}
-    </div>
+      )
+      }
+    </div >
   );
 };
 

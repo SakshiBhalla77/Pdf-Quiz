@@ -41,6 +41,7 @@ const Navbar = () => {
     },
     blackText: {
       color: "#181818", // Black text
+      fontSize: "2rem", // Larger font size
     },
     navLinks: {
       listStyle: "none",
