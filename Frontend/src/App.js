@@ -4,11 +4,11 @@ import Navbar from './screens/Navbar';
 import MainContent from './screens/MainContent';
 import PDFUpload from './screens/PDFUpload';
 import UploadButton from './components/UploadButton';
-import Footer from './components/Footer';
+// import Footer from './components/Footer';
 import About from './screens/About';
 import Contact from './screens/Contact';
 import Quiz from './screens/Quiz';
-import LoadingPage from './screens/LoadingPage'; 
+import LoadingPage from './screens/LoadingPage';
 import './index.css';
 
 function App() {
@@ -46,10 +46,10 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/quiz" element={<Quiz />} />
             <Route path="/loading" element={<LoadingPage />} />
-            <Route path="*" element={<Navigate to="/" />} /> 
+            <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         </main>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </Router>
   );

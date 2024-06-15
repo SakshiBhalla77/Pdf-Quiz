@@ -18,11 +18,12 @@ const Navbar = () => {
       justifyContent: "space-between",
       alignItems: "center",
       padding: "1rem 2rem",
-      backgroundColor: "#FF7A01", // Orange background
+      background: "linear-gradient(90deg, #FF7A01, #FF9901)", // Gradient background
       color: "white", // White text
       borderRadius: "15px", // Rounded edges
       margin: "10px", // Optional: add margin to ensure it doesn't touch the edges of the screen
       fontFamily: "BoldFont, sans-serif", // Apply custom font family
+      boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)", // Add shadow for depth
     },
     logoContainer: {
       display: "flex",
@@ -52,13 +53,32 @@ const Navbar = () => {
     navItem: {
       marginLeft: "20px",
       fontSize: "1.1rem",
+      position: "relative", // For underline hover effect
     },
     navLink: {
       textDecoration: "none",
       fontSize: "1rem",
       color: "white", // White text
-      transition: "color 0.3s",
+      transition: "color 0.3s, transform 0.3s",
       fontFamily: "lightFont, sans-serif", // Apply light font family
+      position: "relative",
+    },
+    navLinkHover: {
+      color: "#FFD700", // Hover text color
+      transform: "scale(1.1)", // Slightly enlarge on hover
+    },
+    navLinkUnderline: {
+      content: "",
+      position: "absolute",
+      width: "0",
+      height: "2px",
+      bottom: "-4px",
+      left: "0",
+      backgroundColor: "#FFD700",
+      transition: "width 0.3s",
+    },
+    navLinkUnderlineHover: {
+      width: "100%",
     },
   };
 
@@ -77,7 +97,6 @@ const Navbar = () => {
       font-style: normal;
     }
   `;
-
   return (
     <>
       <style>{fontStyles}</style>

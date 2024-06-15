@@ -112,11 +112,12 @@ const PDFUpload = ({ onFileAccepted }) => {
             style={{ display: "none" }}
             onChange={handleFileChange}
           />
-          <p>
+          <p style={{ fontSize: '18px', fontWeight: 'bold' }}>
             {selectedFile
               ? `Selected file: ${selectedFile.name}`
               : "Drag and drop a PDF file here, or click to select a file"}
           </p>
+
         </div>
       )}
 

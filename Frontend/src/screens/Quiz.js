@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from "react";
-//import rawQuestionsData from "../components/questions.json";
 import rawQuestionsData from "../response/formattedQuestions.json";
-
 
 const Quiz = () => {
   const [questions, setQuestions] = useState([]);
   const [selectedOptions, setSelectedOptions] = useState({});
   const [score, setScore] = useState(null);
-  const [answersCorrectness, setAnswersCorrectness] = useState({});
   const [submitted, setSubmitted] = useState(false);
 
   useEffect(() => {
@@ -24,26 +21,10 @@ const Quiz = () => {
       }
       return updatedOptions;
     });
-    if (submitted) {
-      updateAnswersCorrectness();
-    }
-  };
-
-  const updateAnswersCorrectness = () => {
-    const answers = {};
-    questions.forEach((question) => {
-      if (selectedOptions[question.question_id] === question.correct_option_id) {
-        answers[question.question_id] = true;
-      } else {
-        answers[question.question_id] = false;
-      }
-    });
-    setAnswersCorrectness(answers);
   };
 
   const calculateScore = () => {
     let score = 0;
-    updateAnswersCorrectness();
     questions.forEach((question) => {
       if (selectedOptions[question.question_id] === question.correct_option_id) {
         score++;
@@ -54,7 +35,7 @@ const Quiz = () => {
   };
 
   return (
-    <div>
+    <div style={{ textAlign: "left", fontFamily: "Arial, sans-serif", maxWidth: "800px", margin: "0 auto" }}>
       <h2>Quiz</h2>
       <form style={{ fontSize: "1.2rem" }}>
         {questions.map((question) => (
@@ -62,22 +43,18 @@ const Quiz = () => {
             key={question.question_id}
             style={{
               marginBottom: "20px",
-              display: "flex",
-              flexDirection: "column",
             }}
           >
-            <div>
+            <div style={{ marginBottom: "10px" }}>
               <h3>{question.question_text}</h3>
             </div>
 
             {question.options.map((option) => {
               const isSelected = selectedOptions[question.question_id] === option.option_id;
               const isCorrect = option.option_id === question.correct_option_id;
-              const isSubmitted = submitted;
 
               let backgroundColor = "transparent";
-
-              if (isSubmitted) {
+              if (submitted) {
                 if (isSelected && isCorrect) {
                   backgroundColor = "#DCF3E9";
                 } else if (isSelected && !isCorrect) {
@@ -95,60 +72,74 @@ const Quiz = () => {
                     borderRadius: "19px",
                     padding: "15px",
                     marginBottom: "15px",
-                    width: "fit-content",
-                    backgroundColor,
+                    display: "flex",
+                    alignItems: "center",
                   }}
                 >
-                  <label
-                    style={{
-                      fontSize: "1.1rem",
-                      display: "flex",
-                      alignItems: "center",
-                    }}
-                  >
-                    <span style={{ width: "200px", display: "inline-block" }}>
-                      {option.text}
-                    </span>
-                    <input
-                      type="checkbox"
-                      checked={isSelected}
-                      onChange={() => handleCheckboxChange(question.question_id, option.option_id)}
-                      style={{
-                        marginLeft: "150px",
-                        transform: "scale(1.5)",
-                      }}
-                    />
-                  </label>
+                  <input
+                    type="checkbox"
+                    checked={isSelected}
+                    onChange={() => handleCheckboxChange(question.question_id, option.option_id)}
+                    style={{ transform: "scale(1.5)" }}
+                  />
+                  <span style={{ marginLeft: "10px" }}>{option.text}</span>
+                  {submitted && (
+                    <p style={{ marginLeft: "10px", color: isCorrect ? "green" : "red", fontSize: "0.9rem" }}>
+                      {isSelected && isCorrect ? "Correct" : isSelected ? "Incorrect" : ""}
+                    </p>
+                  )}
                 </div>
               );
             })}
-            {submitted && (
-              <p style={{ color: answersCorrectness[question.question_id] ? "green" : "red" }}>
-                {answersCorrectness[question.question_id] ? "Correct" : "Incorrect"}
-              </p>
-            )}
           </div>
         ))}
       </form>
-      <button
-        onClick={calculateScore}
-        style={{
-          backgroundColor: "#4B0082",
-          color: "#fff",
-          border: "none",
-          padding: "1rem 2rem",
-          fontSize: "1rem",
-          cursor: "pointer",
-          marginTop: "20px",
-        }}
-      >
-        Submit
-      </button>
-      {score !== null && (
-        <p style={{ color: "#333", marginTop: "20px", fontSize: "1.2rem" }}>
-          Your score is: <span style={{ fontWeight: "bold" }}>{score}</span> out
-          of <span style={{ fontWeight: "bold" }}>{questions.length}</span>
-        </p>
+      {!submitted && (
+        <div style={{ display: "flex", justifyContent: "center", marginTop: "20px", marginBottom: "50px" }}>
+          <button
+            onClick={calculateScore}
+            style={{
+              backgroundColor: "#FF7A01",
+              color: "#fff",
+              border: "none",
+              padding: "12px 24px",
+              fontSize: "1rem",
+              cursor: "pointer",
+              borderRadius: "8px",
+              boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",
+              transition: "background-color 0.3s, transform 0.3s",
+              outline: "none", // Remove default focus outline
+            }}
+            onMouseEnter={(e) => {
+              e.target.style.backgroundColor = "#FF5C00";
+              e.target.style.transform = "translateY(-2px)";
+              e.target.style.boxShadow = "0px 6px 12px rgba(0, 0, 0, 0.15)";
+            }}
+            onMouseLeave={(e) => {
+              e.target.style.backgroundColor = "#FF7A01";
+              e.target.style.transform = "translateY(0)";
+              e.target.style.boxShadow = "0px 4px 8px rgba(0, 0, 0, 0.1)";
+            }}
+          >
+            Submit
+          </button>
+
+        </div>
+
+      )}
+      {submitted && (
+        <div>
+          <p style={{ color: "#333", marginTop: "20px", fontSize: "1.2rem" }}>
+            Your score is: <span style={{ fontWeight: "bold" }}>{score}</span> out
+            of <span style={{ fontWeight: "bold" }}>{questions.length}</span>
+          </p>
+          <p style={{ marginTop: "20px", fontSize: "1rem" }}>
+            {score >= questions
+              .length / 2
+              ? "Congratulations! You passed the quiz."
+              : "Unfortunately, you did not pass the quiz. Please try again."}
+          </p>
+        </div>
       )}
     </div>
   );
