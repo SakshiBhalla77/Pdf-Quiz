@@ -1,31 +1,40 @@
 import React from "react";
 import "../index.css";
+import boldFont from "./fonts/bold.ttf";
+import lightFont from "./fonts/light.ttf";
 
 const About = () => {
   return (
-    <div style={styles.container}>
-      <div style={styles.card}>
-        <div style={styles.cardBody}>
-          <h2 style={styles.title}>About PDF2Quiz</h2>
-          <p style={styles.text}>
-            Welcome to PDF Uploader, your go-to solution for converting PDF
-            documents into interactive quizzes. PDF Uploader is a web
-            application designed to simplify the process of creating quizzes
-            from PDF documents. Whether you're a teacher, student, or
-            professional, our platform offers a convenient solution for
-            converting your educational materials into interactive assessments.
-          </p>
+     
+         
+
+      <div style={styles.container}>
+         
+        <div style={styles.card}>
+
+          <div style={styles.cardBody}>
+            <h2 style={styles.title}>About PDF2Quiz</h2>
+            <p style={styles.text}>
+              Welcome to PDF Uploader, your premier solution for converting PDF
+              documents into interactive quizzes. Our web application simplifies
+              the process of transforming PDFs into engaging quizzes, making it
+              effortless for educators, students, and professionals alike to
+              convert educational materials into interactive assessments.
+            </p>
+          </div>
         </div>
-      </div>
+        
+        
 
       <div style={styles.card}>
         <div style={styles.cardBody}>
           <h2 style={styles.subtitle}>Overview</h2>
           <p style={styles.text}>
-            The primary functionality of our website is to allow users to upload
-            PDF files and automatically generate quizzes based on the content.
-            This can be particularly useful for educational purposes, enabling
-            teachers to quickly create assessments from existing materials.
+            Our platform's core functionality enables users to seamlessly
+            upload PDF files and automatically generate quizzes based on their
+            content. This feature is particularly advantageous in educational
+            settings, empowering educators to efficiently create assessments
+            from their existing teaching materials.
           </p>
         </div>
       </div>
@@ -33,76 +42,60 @@ const About = () => {
       <div style={styles.card}>
         <div style={styles.cardBody}>
           <h2 style={styles.subtitle}>Technologies Used</h2>
-          <p style={styles.text}>
-            Our platform leverages a range of cutting-edge technologies to
-            provide a seamless user experience:
+          <p style={{ ...styles.text, fontFamily: 'lightFont' }}>
+            Our platform integrates advanced technologies to deliver a seamless
+            user experience:
           </p>
           <ul style={styles.list}>
-            <li>
-              <strong>React.js</strong>: A powerful JavaScript library for
-              building user interfaces, which ensures a responsive and dynamic
-              user experience.
+            <li style={{ marginBottom: "0.75rem" }}>
+              <strong style={{ fontFamily: 'boldFont' }}>React.js</strong>: A
+              robust JavaScript library for building responsive and dynamic
+              user interfaces.
             </li>
-            <br/>
-            <li>
-              <strong>FastAPI</strong>: A modern, fast (high-performance), web
-              framework for building APIs with Python 3.7+ based on standard Python
-              type hints.
+            <li style={{ marginBottom: "0.75rem" }}>
+              <strong style={{ fontFamily: 'boldFont' }}>FastAPI</strong>: A
+              high-performance web framework for Python 3.7+ that facilitates
+              rapid API development using standard Python type hints.
             </li>
-            <br />
-            <li>
-              <strong>Amazon S3</strong>: Amazon Simple Storage Service (Amazon S3)
-              is an object storage service that offers industry-leading scalability,
-              data availability, security, and performance.
+            <li style={{ marginBottom: "0.75rem" }}>
+              <strong style={{ fontFamily: 'boldFont' }}>Amazon S3</strong>:
+              Amazon Simple Storage Service provides scalable, secure, and
+              high-performance object storage, ensuring reliable data
+              availability.
             </li>
-            <br />
-            <li>
-              <strong>Amazon EC2</strong>: Amazon Elastic Compute Cloud (Amazon EC2)
-              provides secure and resizable compute capacity in the cloud. It is
-              designed to make web-scale cloud computing easier for developers.
+            <li style={{ marginBottom: "0.75rem" }}>
+              <strong style={{ fontFamily: 'boldFont' }}>Amazon EC2</strong>:
+              Amazon Elastic Compute Cloud offers resizable compute capacity in
+              the cloud, simplifying web-scale computing for developers.
             </li>
-            <br />
-            <li>
-              <strong>Python</strong>: A versatile programming language known for
-              its simplicity and readability, widely used for web development,
-              scientific computing, artificial intelligence, and more.
+            <li style={{ marginBottom: "0.75rem" }}>
+              <strong style={{ fontFamily: 'boldFont' }}>Python</strong>: A
+              versatile programming language renowned for its simplicity and
+              versatility, extensively used in web development, scientific
+              computing, and artificial intelligence.
             </li>
-            <br />
-            <li>
-              <strong>Axios</strong>: A promise-based HTTP client for the browser
-              and Node.js, used to make HTTP requests from the browser or Node.js to
-              the server.
+            <li style={{ marginBottom: "0.75rem" }}>
+              <strong style={{ fontFamily: 'boldFont' }}>Axios</strong>: A
+              promise-based HTTP client for making efficient HTTP requests from
+              browsers and Node.js to servers.
             </li>
-            <br />
-            <li>
-              <strong>OpenAI GPT</strong>: OpenAI's Generative Pre-trained
-              Transformer (GPT) is a state-of-the-art language processing AI model,
-              used for natural language understanding, generation, and many other
-              NLP tasks.
+            <li style={{ marginBottom: "0.75rem" }}>
+              <strong style={{ fontFamily: 'boldFont' }}>OpenAI GPT</strong>:
+              OpenAI's state-of-the-art Generative Pre-trained Transformer
+              model, employed for natural language understanding, generation,
+              and various NLP tasks.
             </li>
-            <br />
-            <li>
-              <strong>Langchain</strong>: A blockchain platform that provides
-              solutions for language-related applications, such as translation,
-              localization, and language learning.
+            <li style={{ marginBottom: "0.75rem" }}>
+              <strong style={{ fontFamily: 'boldFont' }}>Langchain</strong>: A
+              blockchain platform specializing in language-related applications
+              like translation, localization, and language learning solutions.
             </li>
           </ul>
-        </div>
-      </div>
-      <div style={styles.card}>
-        <div style={styles.cardBody}>
-          <h2 style={styles.subtitle}>Contact Us</h2>
-          <p style={styles.text}>
-            If you have any questions, feedback, or need support, please don't
-            hesitate to. We're here to help and continuously improve your
-            experience with PDF Uploader.
-          </p>
         </div>
       </div>
     </div>
   );
 };
-
 const styles = {
   container: {
     padding: "2rem",
@@ -110,9 +103,10 @@ const styles = {
     margin: "0 auto",
   },
   card: {
+    position: "relative", // Ensure 'relative' positioning for normal flow
     marginBottom: "1.5rem",
     border: "1px solid #ccc",
-    borderRadius: "8px",
+    borderRadius: "18px",
     boxShadow: "0 4px 8px 0 rgba(0,0,0,0.2)",
     backgroundColor: "#fff",
   },
@@ -121,14 +115,16 @@ const styles = {
   },
   title: {
     fontSize: "1.75rem",
-    color: "#4B0082",
+    color: "#FFA500",
     marginBottom: "0.5rem",
+    fontFamily: "boldFont", // Assuming 'boldFont' is imported or defined elsewhere
   },
   subtitle: {
     fontSize: "1.75rem",
-    color: "#4B0082",
+    color: "#FFA500",
     marginTop: "1.5rem",
     marginBottom: "0.5rem",
+    fontFamily: "boldFont", // Assuming 'boldFont' is imported or defined elsewhere
   },
   text: {
     fontSize: "1rem",
@@ -140,5 +136,7 @@ const styles = {
     listStyleType: "none",
   },
 };
+
+
 
 export default About;

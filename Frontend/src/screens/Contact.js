@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import "./Contact.css"; // Import the CSS file
+import boldFont from "./fonts/bold.ttf";
+import lightFont from "./fonts/light.ttf";
 
 const Contact = () => {
   const teamMembers = [
@@ -46,7 +48,7 @@ const Contact = () => {
 
   return (
     <div style={styles.container}>
-      <h2>Contact Us</h2>
+      <h2 style={{ ...styles.h2, fontFamily: boldFont }}>Contact Us</h2>
       <div style={styles.teamContainer}>
         {teamMembers.map((member, index) => (
           <div key={index} style={styles.memberContainer}>
@@ -58,12 +60,12 @@ const Contact = () => {
               />
               <div style={styles.content}>
                 <div style={styles.nameRole}>
-                  <p style={styles.name}>{member.name}</p>
-                  <p>{member.role}</p>
+                  <p style={{ ...styles.name, fontFamily: boldFont }}>{member.name}</p>
+                  <p style={{ fontFamily: lightFont, fontSize: "1rem" }}>{member.role}</p>
                 </div>
 
                 <div style={styles.contact}>
-                  <h3>Contact Me At</h3>
+                  <h3 style={{ fontFamily: lightFont }}>Contact Me At</h3>
                   <div style={styles.iconsContainer}>
                     <a
                       href={member.linkedin}
@@ -108,6 +110,10 @@ const Contact = () => {
 };
 
 const styles = {
+  h2: {
+    fontSize: "2rem",
+    marginBottom: "1rem",
+  },
   container: {
     padding: "2rem",
     textAlign: "center",
@@ -138,11 +144,13 @@ const styles = {
     width: "170px",
     height: "170px",
     borderRadius: "50%",
-    marginBottom: "rem",
+    marginBottom: "1rem",
   },
   content: {
     textAlign: "center",
     marginTop: "1rem",
+    fontFamily: boldFont, // Apply boldFont as the default font family for the entire container
+
   },
   nameRole: {
     marginBottom: "1rem",
@@ -159,6 +167,7 @@ const styles = {
     fontWeight: "bold",
     marginBottom: "0.5rem",
     fontSize: "1.2rem",
+    fontFamily: boldFont, // Apply boldFont specifically to the name
   },
 };
 
