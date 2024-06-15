@@ -2,35 +2,36 @@ body {
   font-family: "Helvetica", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #fff;
+  background-color: #FFF4EA; /* Light orange background */
   color: #333;
 }
 
 .navbar,
 .footer {
-  background-color: #4b0082; 
-  color: white;
+  background-color: #FF7A01; /* Orange background */
+  color: white; /* White text */
 }
 
-.nav-link,
-.nav-link:hover {
-  color: white;
+.nav-link {
+  color: white; /* White text */
   text-decoration: none;
+  transition: color 0.3s; /* Smooth transition for color change */
 }
 
 .nav-link:hover {
-  color: #dda0dd;
+  color: black; /* Black text on hover */
 }
 
 .button {
-  background-color: #4b0082;
-  color: white;
+  background-color: #FF7A01; /* Orange background */
+  color: white; /* White text */
   border: none;
   padding: 1rem 2rem;
   cursor: pointer;
   font-size: 1rem;
+  transition: background-color 0.3s; /* Smooth transition for background color change */
 }
 
 .button:hover {
-  background-color: #dda0dd;
+  background-color: #FFA500; /* Light orange hover */
 }

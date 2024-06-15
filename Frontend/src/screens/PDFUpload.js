@@ -1,13 +1,14 @@
 import React, { useRef, useState } from "react";
 import axios from "axios";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
+import "../components/buttonStyles.css";
 
 const PDFUpload = ({ onFileAccepted }) => {
   const [dragOver, setDragOver] = useState(false);
   const [selectedFile, setSelectedFile] = useState(null);
   const [pdfSrc, setPdfSrc] = useState(null);
   const fileInputRef = useRef(null);
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   const uploadFile = async () => {
     if (!selectedFile) {
@@ -17,7 +18,7 @@ const PDFUpload = ({ onFileAccepted }) => {
 
     const formData = new FormData();
     formData.append("file", selectedFile);
-    navigate("/loading"); 
+    navigate("/loading");
 
     try {
       await axios.post("http://localhost:8000/upload", formData, {
@@ -78,13 +79,23 @@ const PDFUpload = ({ onFileAccepted }) => {
   };
 
   return (
-    <div> 
+    <div>
       {!selectedFile && (
         <div
           style={{
-            ...styles.dropZone,
-            borderColor: dragOver ? "#dda0dd" : "#4B0082",
-            backgroundColor: dragOver ? "#f3e5f5" : "transparent",
+            width: "100%",
+            height: "50vh",
+            border: "2px dashed #FF7A01",
+            borderRadius: "20px", // Adjusted border-radius for rounded corners
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            margin: "20px auto",
+            padding: "20px",
+            cursor: "pointer",
+            transition: "background-color 0.3s, border-color 0.3s",
+            borderColor: dragOver ? "#FF7A01" : "#FF7A01",
+            backgroundColor: dragOver ? "#FFF4EA" : "transparent",
           }}
           onDragOver={handleDragOver}
           onDragLeave={handleDragLeave}
@@ -98,7 +109,7 @@ const PDFUpload = ({ onFileAccepted }) => {
             type="file"
             accept="application/pdf"
             ref={fileInputRef}
-            style={styles.input}
+            style={{ display: "none" }}
             onChange={handleFileChange}
           />
           <p>
@@ -117,47 +128,18 @@ const PDFUpload = ({ onFileAccepted }) => {
             height="500px"
             title="Uploaded PDF"
           ></iframe>
-          <button style={styles.button} onClick={uploadFile}>
-            Upload
-          </button>
-          <button style={styles.button} onClick={handleCancel}>
-            Cancel
-          </button>
+          <div style={{ display: "flex", gap: "10px", justifyContent: "center" }}>
+            <button className="button" onClick={uploadFile}>
+              Upload
+            </button>
+            <button className="button" onClick={handleCancel}>
+              Cancel
+            </button>
+          </div>
         </div>
       )}
     </div>
   );
 };
 
-const styles = {
-  dropZone: {
-    width: "100%",
-    height: "50vh",
-    border: "2px dashed #4B0082",
-    borderRadius: "10px",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    margin: "20px auto",
-    padding: "20px",
-    cursor: "pointer",
-    transition: "background-color 0.3s, border-color 0.3s",
-  },
-  input: {
-    display: "none",
-  },
-  button: {
-    backgroundColor: "#4B0082",
-    color: "white",
-    border: "none",
-    padding: "1rem 2rem",
-    cursor: "pointer",
-    fontSize: "1rem",
-    marginTop: "20px",
-    alignSelf: "center",
-    marginRight: "10px",
-  },
-};
-
 export default PDFUpload;
-
