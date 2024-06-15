@@ -1,8 +1,5 @@
 import React from "react";
 import "../index.css";
-import boldFont from "./fonts/bold.ttf";
-import lightFont from "./fonts/light.ttf";
-
 const About = () => {
   return (
      
