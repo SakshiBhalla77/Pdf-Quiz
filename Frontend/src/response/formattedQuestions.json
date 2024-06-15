@@ -1,179 +1,82 @@
 [
   {
     "question_id": 1,
-    "question_text": "What is the capital city of Australia?",
+    "question_text": "Seema visited a Natural Gas Compressing Unit and found that the gas can be liquefied under specific conditions of temperature and pressure. While sharing her experience with friends she got confused. Help her to identity the correct set of conditions.",
     "options": [
-      {"option_id": 1, "text": "Sydney"},
-      {"option_id": 2, "text": "Melbourne"},
-      {"option_id": 3, "text": "Canberra"},
-      {"option_id": 4, "text": "Brisbane"}
+      {
+        "option_id": 1,
+        "text": "Low temperature, low pressure"
+      },
+      {
+        "option_id": 2,
+        "text": "High temperature, low pressure"
+      },
+      {
+        "option_id": 3,
+        "text": "Low temperature, high pressure"
+      },
+      {
+        "option_id": 4,
+        "text": "High temperature, high pressure"
+      }
     ],
-    "correct_option_id": 3
+    "correct_option_id": 1
   },
   {
     "question_id": 2,
-    "question_text": "Which planet in our solar system is known as the 'Red Planet'?",
+    "question_text": "Which of the following are physical changes?",
     "options": [
-      {"option_id": 1, "text": "Venus"},
-      {"option_id": 2, "text": "Mars"},
-      {"option_id": 3, "text": "Jupiter"},
-      {"option_id": 4, "text": "Saturn"}
+      {
+        "option_id": 1,
+        "text": "(i) Melting of iron metal"
+      },
+      {
+        "option_id": 2,
+        "text": "(ii) Rusting of iron"
+      },
+      {
+        "option_id": 3,
+        "text": "(iii) Bending of an iron rod"
+      },
+      {
+        "option_id": 4,
+        "text": "(iv) Drawing a wire of iron metal"
+      }
     ],
-    "correct_option_id": 2
+    "correct_option_id": 4
   },
   {
     "question_id": 3,
-    "question_text": "What is the largest ocean on Earth?",
+    "question_text": "In a sample of ethyl ethanoate (CH3COOC2H5) the two oxygen atoms have the same number of electrons but different number of neutrons. Which of the following is the correct reason for it?",
     "options": [
-      {"option_id": 1, "text": "Atlantic Ocean"},
-      {"option_id": 2, "text": "Indian Ocean"},
-      {"option_id": 3, "text": "Arctic Ocean"},
-      {"option_id": 4, "text": "Pacific Ocean"}
+      {
+        "option_id": 1,
+        "text": "One of the oxygen atoms has gained electrons"
+      },
+      {
+        "option_id": 2,
+        "text": "One of the oxygen atoms has gained two neutrons"
+      },
+      {
+        "option_id": 3,
+        "text": "The two oxygen atoms are isotopes"
+      },
+      {
+        "option_id": 4,
+        "text": "The two oxygen atoms are isobars."
+      }
     ],
-    "correct_option_id": 4
+    "correct_option_id": 3
   },
   {
     "question_id": 4,
-    "question_text": "Which famous artist painted the Mona Lisa?",
+    "question_text": "A cell will swell up if",
     "options": [
-      {"option_id": 1, "text": "Vincent van Gogh"},
-      {"option_id": 2, "text": "Pablo Picasso"},
-      {"option_id": 3, "text": "Leonardo da Vinci"},
-      {"option_id": 4, "text": "Michelangelo"}
-    ],
-    "correct_option_id": 3
-  },
-  {
-    "question_id": 5,
-    "question_text": "What is the smallest planet in our solar system?",
-    "options": [
-      {"option_id": 1, "text": "Earth"},
-      {"option_id": 2, "text": "Venus"},
-      {"option_id": 3, "text": "Mercury"},
-      {"option_id": 4, "text": "Mars"}
-    ],
-    "correct_option_id": 3
-  },
-  {
-    "question_id": 6,
-    "question_text": "Which gas is essential for human respiration?",
-    "options": [
-      {"option_id": 1, "text": "Carbon dioxide"},
-      {"option_id": 2, "text": "Oxygen"},
-      {"option_id": 3, "text": "Nitrogen"},
-      {"option_id": 4, "text": "Helium"}
-    ],
-    "correct_option_id": 2
-  },
-  {
-    "question_id": 7,
-    "question_text": "What is the symbol for the chemical element Iron?",
-    "options": [
-      {"option_id": 1, "text": "Ir"},
-      {"option_id": 2, "text": "Fe"},
-      {"option_id": 3, "text": "I"},
-      {"option_id": 4, "text": "Fn"}
-    ],
-    "correct_option_id": 2
-  },
-  {
-    "question_id": 8,
-    "question_text": "Which animal is known as the 'King of the Jungle'?",
-    "options": [
-      {"option_id": 1, "text": "Tiger"},
-      {"option_id": 2, "text": "Lion"},
-      {"option_id": 3, "text": "Leopard"},
-      {"option_id": 4, "text": "Cheetah"}
-    ],
-    "correct_option_id": 2
-  },
-  {
-    "question_id": 9,
-    "question_text": "What is the smallest continent in the world?",
-    "options": [
-      {"option_id": 1, "text": "Africa"},
-      {"option_id": 2, "text": "Australia"},
-      {"option_id": 3, "text": "Europe"},
-      {"option_id": 4, "text": "Antarctica"}
-    ],
-    "correct_option_id": 2
-  },
-  {
-    "question_id": 10,
-    "question_text": "Which plant is considered a staple food crop in many parts of the world?",
-    "options": [
-      {"option_id": 1, "text": "Wheat"},
-      {"option_id": 2, "text": "Potatoes"},
-      {"option_id": 3, "text": "Rice"},
-      {"option_id": 4, "text": "Corn"}
-    ],
-    "correct_option_id": 3
-  },
-  {
-    "question_id": 11,
-    "question_text": "What is the rarest blood type?",
-    "options": [
-      {"option_id": 1, "text": "O"},
-      {"option_id": 2, "text": "A"},
-      {"option_id": 3, "text": "B"},
-      {"option_id": 4, "text": "AB"}
-    ],
-    "correct_option_id": 4
-  },
-  {
-    "question_id": 12,
-    "question_text": "Which inventor is credited with the creation of the telephone?",
-    "options": [
-      {"option_id": 1, "text": "Thomas Edison"},
-      {"option_id": 2, "text": "Alexander Graham Bell"},
-      {"option_id": 3, "text": "Nikola Tesla"},
-      {"option_id": 4, "text": "Benjamin Franklin"}
-    ],
-    "correct_option_id": 2
-  },
-  {
-    "question_id": 13,
-    "question_text": "What is the largest planet in our solar system?",
-    "options": [
-      {"option_id": 1, "text": "Jupiter"},
-      {"option_id": 2, "text": "Saturn"},
-      {"option_id": 3, "text": "Neptune"},
-      {"option_id": 4, "text": "Uranus"}
+      {
+        "option_id": 1,
+        "text": "the concentration of water molecules in the cell is higher than the concentration of water molecules in the surrounding medium"
+      }
     ],
     "correct_option_id": 1
-  },
-  {
-    "question_id": 14,
-    "question_text": "Which famous scientist developed the theory of relativity?",
-    "options": [
-      {"option_id": 1, "text": "Albert Einstein"},
-      {"option_id": 2, "text": "Isaac Newton"},
-      {"option_id": 3, "text": "Galileo Galilei"},
-      {"option_id": 4, "text": "Charles Darwin"}
-    ],
-    "correct_option_id": 1
-  },
-  {
-    "question_id": 15,
-    "question_text": "What is the largest desert in the world?",
-    "options": [
-      {"option_id": 1, "text": "Gobi Desert"},
-      {"option_id": 2, "text": "Sahara Desert"},
-      {"option_id": 3, "text": "Antarctic Desert"},
-      {"option_id": 4, "text": "Arabian Desert"}
-    ],
-    "correct_option_id": 2
-  },
-  {
-    "question_id": 16,
-    "question_text": "Which ancient civilization is known for building the pyramids?",
-    "options": [
-      {"option_id": 1, "text": "Mayans"},
-      {"option_id": 2, "text": "Egyptians"},
-      {"option_id": 3, "text": "Greeks"},
-      {"option_id": 4, "text": "Romans"}
-    ],
-    "correct_option_id": 2
   }
-
 ]

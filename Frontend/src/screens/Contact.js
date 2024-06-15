@@ -40,7 +40,7 @@ const Contact = () => {
       github: "https://github.com/CorruptEntity0982",
       email: "shashank02.dubey@gmail.com",
       imageUrl:
-        "https://media.licdn.com/dms/image/D5603AQHGF0eCFiWPgA/profile-displayphoto-shrink_800_800/0/1690141377080?e=1723075200&v=beta&t=iO4tbgd0FUHxNb91WKds-VEAmh5K0GM8u9TSNEWSDUE",
+        "https://media.licdn.com/dms/image/D5603AQHOp6CSHVXhMw/profile-displayphoto-shrink_800_800/0/1718447406884?e=1723680000&v=beta&t=Lth2qzNnqd4ZjzVUN2V6O0cczWuAIfBN1D4kbJC7euM",
     },
   ];
 
