@@ -50,7 +50,6 @@ git push origin main<br>
 ```
  
 ### How to merge changes to main branch from feature branch
-This step is also unecessary at the moment.
 ```
 git switch main
 git merge feature-branch  (Replace feature-branch with actual name of your feature branch)
