@@ -32,8 +32,8 @@ async def upload_file(file: UploadFile = File(...)):
     run_llm_path = os.path.join(current_dir, 'runLLm.py')
     format_json_path = os.path.join(current_dir, 'formatJSON.py')
     
-    subprocess.run(['python3', run_llm_path])
-    subprocess.run(['python3', format_json_path])
+    subprocess.run(['python', run_llm_path])
+    subprocess.run(['python', format_json_path])
 
     return {"info": f"file '{file.filename}' saved at '{file_location}'"}
 
