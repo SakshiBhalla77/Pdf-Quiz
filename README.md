@@ -3,11 +3,7 @@ Website to convert any pdf into a quiz.
 
 ### Install the following dependancies to run backend
 ```
-pip install langchain
-pip install aiofiles
-pip install PyPDF2
-pip install fastapi
-pip install axios
+pip install -r requirements.txt
 ```
 
 ### Install node modules to run frontend
