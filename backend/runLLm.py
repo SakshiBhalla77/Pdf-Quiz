@@ -7,11 +7,14 @@ from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.vectorstores import Chroma
 from langchain.chains import RetrievalQA
 from langchain.chat_models import ChatOpenAI
+import subprocess
+
+
 
 os.environ['OPENAI_API_KEY'] = "sk-proj-36xUsrcCmt3sBIOmTHaXT3BlbkFJ1t2nlWKk3yse5Es9LCIS"
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
-
+format_json_path = os.path.join(current_dir, 'formatJSON.py')
 folder_path = os.path.join(current_dir, 'uploads')
 files = os.listdir(folder_path)
 pdf_files = [file for file in files if file.lower().endswith('.pdf')]
@@ -92,3 +95,4 @@ with open(response_json_path, 'w') as json_file:
 
 os.remove(first_pdf_path)
 os.remove(os.path.join(folder_path, 'loader.txt'))
+subprocess.run(['python3', format_json_path])

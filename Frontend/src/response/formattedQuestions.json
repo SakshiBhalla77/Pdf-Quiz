@@ -1,69 +1,88 @@
 [
   {
     "question_id": 1,
-    "question_text": "What is the term used to describe the process of changing a blank space to its character code equivalent %20?",
+    "question_text": "What does ATM stand for?",
     "options": [
       {
         "option_id": 1,
-        "text": "Normalization"
+        "text": "Any Time Money"
       },
       {
         "option_id": 2,
-        "text": "Canonicalization"
+        "text": "Auto Truck of Mahindra"
       },
       {
         "option_id": 3,
-        "text": "Hexadecimal Conversion"
+        "text": "Automated Teller Machine"
       },
       {
         "option_id": 4,
-        "text": "Pattern Matching"
+        "text": "None of the above"
       }
     ],
-    "correct_option_id": 2
+    "correct_option_id": 3
   },
   {
     "question_id": 2,
-    "question_text": "What is the term for a system that isolates a suspected intruder and restricts access?",
+    "question_text": "What is the result of timely repayment of loans?",
     "options": [
       {
         "option_id": 1,
-        "text": "Intrusion Detection System (IDS)"
+        "text": "Aam Aadmi Bima Yojana beneficiaries"
       },
       {
         "option_id": 2,
-        "text": "Intrusion Protection System (IPS)"
+        "text": "None of the above"
       },
       {
         "option_id": 3,
-        "text": "Pattern Matching System"
+        "text": "Chanda Kochar"
       },
       {
         "option_id": 4,
-        "text": "Heuristic System"
+        "text": "All of the above"
       }
     ],
-    "correct_option_id": 2
+    "correct_option_id": 4
   },
   {
     "question_id": 3,
-    "question_text": "What is the desirable goal for an IDS in terms of its operation?",
+    "question_text": "For what purposes do banks provide loans?",
     "options": [
       {
         "option_id": 1,
-        "text": "Slow, complex, and inaccurate"
+        "text": "Home"
       },
       {
         "option_id": 2,
-        "text": "Fast, simple, and accurate"
+        "text": "Car"
       },
       {
         "option_id": 3,
-        "text": "Flexible, complex, and accurate"
+        "text": "Education"
       },
       {
         "option_id": 4,
-        "text": "Manual, heuristic, and slow"
+        "text": "All of the above"
+      }
+    ],
+    "correct_option_id": 4
+  },
+  {
+    "question_id": 4,
+    "question_text": "Which currency note has a security thread?",
+    "options": [
+      {
+        "option_id": 1,
+        "text": "Rs.50/-"
+      },
+      {
+        "option_id": 2,
+        "text": "Rs.100/-"
+      },
+      {
+        "option_id": 3,
+        "text": "Rs.500/-"
       }
     ],
     "correct_option_id": 2
