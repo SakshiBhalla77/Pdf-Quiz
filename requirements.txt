@@ -1,0 +1,6 @@
+fastapi
+langchain
+PyPDF2
+aiofiles
+axios
+python-dotenv

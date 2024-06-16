@@ -8,10 +8,10 @@ from langchain.vectorstores import Chroma
 from langchain.chains import RetrievalQA
 from langchain.chat_models import ChatOpenAI
 import subprocess
+from dotenv import load_dotenv
 
-
-
-os.environ['OPENAI_API_KEY'] = "sk-proj-36xUsrcCmt3sBIOmTHaXT3BlbkFJ1t2nlWKk3yse5Es9LCIS"
+load_dotenv()
+os.environ['OPENAI_API_KEY'] = os.getenv('OPENAI_API_KEY')
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 format_json_path = os.path.join(current_dir, 'formatJSON.py')

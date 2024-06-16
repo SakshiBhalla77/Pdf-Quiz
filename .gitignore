@@ -15,3 +15,5 @@ __pycache
 *.pyc
 
 .vscode/
+
+.env

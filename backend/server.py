@@ -3,7 +3,6 @@ from fastapi.middleware.cors import CORSMiddleware
 import aiofiles
 import os
 import subprocess
-import json
 
 app = FastAPI()
 
