@@ -91,10 +91,10 @@
   margin-right: 10px;
 }
 
-.Btn:hover .BG {
+/* .Btn:hover .BG {
   transform: rotate(35deg);
   transform-origin: bottom;
-}
+} */
 
 .svgContainer {
   width: 100%;
@@ -122,18 +122,34 @@
   transition: all 0.3s;
 }
 
-.BG.linkedIn {
-  background: #0077b5;
+/* .BG.linkedIn {
+  background: #181818;
 }
 
 .BG.Github {
-  background: #181818;
+  background: #0077b5;
 }
 
 .BG.X {
   background: #181818;
-}
+} */
 
 .svgIcon {
   fill: white;
+}
+/* Add this CSS to your stylesheet */
+.Btn:nth-child(1) svg path {
+  fill: black; /* Fill LinkedIn icon with blue color */
+}
+
+.Btn:nth-child(2) svg path {
+  fill: #0077b5; /* Fill GitHub icon with black color */
+}
+
+.Btn:nth-child(3) svg path {
+  fill: black; /* Fill X icon with black color */
+}
+.Btn svg {
+  height: 2em; /* Adjust the height of the icons */
+  width: 2em; /* Adjust the width of the icons */
 }
