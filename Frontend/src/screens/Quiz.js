@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import rawQuestionsData from "../response/formattedQuestions.json";
+import { MdCheckCircle } from "react-icons/md"; // Importing the green check icon
 
 const Quiz = () => {
   const [questions, setQuestions] = useState([]);
@@ -36,6 +37,12 @@ const Quiz = () => {
     setSubmitted(true);
   };
 
+  const resetQuiz = () => {
+    setSelectedOptions({});
+    setScore(null);
+    setSubmitted(false);
+  };
+
   return (
     <div
       style={{
@@ -43,6 +50,7 @@ const Quiz = () => {
         fontFamily: "Arial, sans-serif",
         maxWidth: "800px",
         margin: "0 auto",
+        position: "relative", // Ensure the container is relative for modal positioning
       }}
     >
       <h2>Quiz</h2>
@@ -72,7 +80,6 @@ const Quiz = () => {
                 }
               } else if (isSelected) {
                 backgroundColor = "#FF9F66"; // Change this to your desired selected color
-                // backgroundColor = "#FF610"; // Change this to your desired selected color
               }
 
               return (
@@ -126,7 +133,8 @@ const Quiz = () => {
             onMouseEnter={(e) => {
               e.target.style.backgroundColor = "#FF5C00";
               e.target.style.transform = "translateY(-2px)";
-              e.target.style.boxShadow = "0px 6px 12px rgba(0, 0, 0, 0.15)";
+              e.target.style.boxShadow =
+                "0px 6px 12px rgba(0, 0, 0, 0.15)";
             }}
             onMouseLeave={(e) => {
               e.target.style.backgroundColor = "#FF7A01";
@@ -139,17 +147,61 @@ const Quiz = () => {
         </div>
       )}
       {submitted && (
-        <div>
-          <p style={{ color: "#333", marginTop: "20px", fontSize: "1.2rem" }}>
-            Your score is: <span style={{ fontWeight: "bold" }}>{score}</span>{" "}
-            out of{" "}
-            <span style={{ fontWeight: "bold" }}>{questions.length}</span>
-          </p>
-          <p style={{ marginTop: "20px", marginBottom: "100px", fontSize: "1.2rem", fontWeight: "bold", color: "#DC3545" }}>
-            {score >= questions.length / 2
-              ? "Congratulations! You passed the quiz."
-              : "Unfortunately, you did not pass the quiz. Please try again."}
-          </p>
+        <div
+          style={{
+            position: "fixed",
+            top: "0",
+            left: "0",
+            width: "100%",
+            height: "100%",
+            backgroundColor: "rgba(0, 0, 0, 0.5)", // Semi-transparent black overlay for background blur
+            zIndex: "1000",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <div
+            style={{
+              backgroundColor: score >= questions.length / 2 ? "#C3E6CB" : "#FFD8BF", // Green for pass, orange for fail
+              padding: "20px",
+              borderRadius: "8px",
+              textAlign: "center",
+              maxWidth: "80%",
+            }}
+          >
+            {score >= questions.length / 2 ? (
+              <MdCheckCircle style={{ color: "#28A745", fontSize: "3rem", marginBottom: "10px" }} />
+            ) : (
+              <div style={{ fontSize: "3rem", marginBottom: "10px" }}>😞</div> // Display a sad emoji or any other icon for fail
+            )}
+            <p style={{ fontSize: "1.2rem", color: "#333" }}>
+              Your score is: <strong>{score}</strong> out of{" "}
+              <strong>{questions.length}</strong>
+            </p>
+            <p style={{ fontSize: "1.2rem", fontWeight: "bold", color: "#DC3545" }}>
+              {score >= questions.length / 2
+                ? "Congratulations! You passed the quiz."
+                : "Unfortunately, you did not pass the quiz. Please try again."}
+            </p>
+            <button
+              onClick={resetQuiz}
+              style={{
+                backgroundColor: "#FF7A01",
+                color: "#fff",
+                border: "none",
+                padding: "12px 24px",
+                fontSize: "1rem",
+                cursor: "pointer",
+                borderRadius: "8px",
+                boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",
+                marginTop: "20px",
+                outline: "none",
+              }}
+            >
+              Try Again
+            </button>
+          </div>
         </div>
       )}
     </div>
