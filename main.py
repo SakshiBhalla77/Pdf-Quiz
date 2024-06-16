@@ -13,9 +13,9 @@ app.add_middleware(
     allow_methods=["*"], 
     allow_headers=["*"],  
 )
-
-current_dir = os.path.dirname(os.path.abspath(__file__))
-UPLOAD_DIRECTORY = os.path.join(current_dir, 'uploads')
+curr = os.path.dirname(os.path.abspath(__file__))
+current_dir = os.path.join(curr,'backend')
+UPLOAD_DIRECTORY = os.path.join(current_dir,'uploads')
 
 if not os.path.exists(UPLOAD_DIRECTORY):
     os.makedirs(UPLOAD_DIRECTORY)
