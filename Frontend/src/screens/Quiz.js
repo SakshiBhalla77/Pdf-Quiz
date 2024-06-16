@@ -1,16 +1,23 @@
 import React, { useState, useEffect } from "react";
 import rawQuestionsData from "../response/formattedQuestions.json";
-import { MdCheckCircle } from "react-icons/md"; // Importing the green check icon
+import defaultQuestionsData from "../components/questions.json";
+import { MdCheckCircle } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 
 const Quiz = () => {
   const [questions, setQuestions] = useState([]);
   const [selectedOptions, setSelectedOptions] = useState({});
   const [score, setScore] = useState(null);
   const [submitted, setSubmitted] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    setQuestions(rawQuestionsData);
-  }, []);
+    if (JSON.stringify(rawQuestionsData) === JSON.stringify({'message': 'failed'})) {
+      setQuestions(defaultQuestionsData);
+      navigate("/error");
+    }
+    else setQuestions(rawQuestionsData);
+  }, [navigate]);
 
   const handleOptionClick = (questionId, optionId) => {
     setSelectedOptions((prevState) => {
@@ -50,7 +57,7 @@ const Quiz = () => {
         fontFamily: "Arial, sans-serif",
         maxWidth: "800px",
         margin: "0 auto",
-        position: "relative", // Ensure the container is relative for modal positioning
+        position: "relative",
       }}
     >
       <h2>Quiz</h2>
@@ -79,7 +86,7 @@ const Quiz = () => {
                   backgroundColor = "#DCF3E9";
                 }
               } else if (isSelected) {
-                backgroundColor = "#FF9F66"; // Change this to your desired selected color
+                backgroundColor = "#FF9F66"; 
               }
 
               return (
