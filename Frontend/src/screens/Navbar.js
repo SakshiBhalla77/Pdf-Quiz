@@ -60,7 +60,7 @@ const Navbar = () => {
 
     navLink: {
       textDecoration: "none",
-      fontSize: "1rem",
+      fontSize: "1.3rem",
       color: "white", // White text
       transition: "color 0.3s, transform 0.3s",
       fontFamily: "lightFont, sans-serif", // Apply light font family
