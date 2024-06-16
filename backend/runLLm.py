@@ -39,7 +39,7 @@ def getTextFromPDF() -> str:
 
 loader = TextLoader(getTextFromPDF())
 documents = loader.load()
-text_splitter = RecursiveCharacterTextSplitter(chunk_size=400, chunk_overlap=50)
+text_splitter = RecursiveCharacterTextSplitter(chunk_size=200, chunk_overlap=100)
 texts = text_splitter.split_documents(documents)
 embeddings = OpenAIEmbeddings()
 store = Chroma.from_documents(texts, embeddings, collection_name="Quiz-PDF")
@@ -48,7 +48,8 @@ llm = ChatOpenAI(temperature=0.8, model="gpt-3.5-turbo")
 chain = RetrievalQA.from_chain_type(llm, retriever=store.as_retriever())
 
 prompt = """
-You are given a document consisting of questions and multiple choice options.
+You are given a document consisting of questions and multiple choice options. 
+If you do not find the document in mcq format, to the best of your ability generate 20 mcq by yourself related to the context provided by the document.
 Return a response in JSON format. Each JSON object should contain the following fields:
 - question_id
 - question_text

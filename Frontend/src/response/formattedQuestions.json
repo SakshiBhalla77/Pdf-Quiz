@@ -1,82 +1,71 @@
 [
   {
     "question_id": 1,
-    "question_text": "Seema visited a Natural Gas Compressing Unit and found that the gas can be liquefied under specific conditions of temperature and pressure. While sharing her experience with friends she got confused. Help her to identity the correct set of conditions.",
+    "question_text": "What is the term used to describe the process of changing a blank space to its character code equivalent %20?",
     "options": [
       {
         "option_id": 1,
-        "text": "Low temperature, low pressure"
+        "text": "Normalization"
       },
       {
         "option_id": 2,
-        "text": "High temperature, low pressure"
+        "text": "Canonicalization"
       },
       {
         "option_id": 3,
-        "text": "Low temperature, high pressure"
+        "text": "Hexadecimal Conversion"
       },
       {
         "option_id": 4,
-        "text": "High temperature, high pressure"
+        "text": "Pattern Matching"
       }
     ],
-    "correct_option_id": 1
+    "correct_option_id": 2
   },
   {
     "question_id": 2,
-    "question_text": "Which of the following are physical changes?",
+    "question_text": "What is the term for a system that isolates a suspected intruder and restricts access?",
     "options": [
       {
         "option_id": 1,
-        "text": "(i) Melting of iron metal"
+        "text": "Intrusion Detection System (IDS)"
       },
       {
         "option_id": 2,
-        "text": "(ii) Rusting of iron"
+        "text": "Intrusion Protection System (IPS)"
       },
       {
         "option_id": 3,
-        "text": "(iii) Bending of an iron rod"
+        "text": "Pattern Matching System"
       },
       {
         "option_id": 4,
-        "text": "(iv) Drawing a wire of iron metal"
+        "text": "Heuristic System"
       }
     ],
-    "correct_option_id": 4
+    "correct_option_id": 2
   },
   {
     "question_id": 3,
-    "question_text": "In a sample of ethyl ethanoate (CH3COOC2H5) the two oxygen atoms have the same number of electrons but different number of neutrons. Which of the following is the correct reason for it?",
+    "question_text": "What is the desirable goal for an IDS in terms of its operation?",
     "options": [
       {
         "option_id": 1,
-        "text": "One of the oxygen atoms has gained electrons"
+        "text": "Slow, complex, and inaccurate"
       },
       {
         "option_id": 2,
-        "text": "One of the oxygen atoms has gained two neutrons"
+        "text": "Fast, simple, and accurate"
       },
       {
         "option_id": 3,
-        "text": "The two oxygen atoms are isotopes"
+        "text": "Flexible, complex, and accurate"
       },
       {
         "option_id": 4,
-        "text": "The two oxygen atoms are isobars."
+        "text": "Manual, heuristic, and slow"
       }
     ],
-    "correct_option_id": 3
-  },
-  {
-    "question_id": 4,
-    "question_text": "A cell will swell up if",
-    "options": [
-      {
-        "option_id": 1,
-        "text": "the concentration of water molecules in the cell is higher than the concentration of water molecules in the surrounding medium"
-      }
-    ],
-    "correct_option_id": 1
+    "correct_option_id": 2
   }
 ]

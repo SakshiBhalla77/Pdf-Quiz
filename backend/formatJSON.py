@@ -14,8 +14,6 @@ cleaned_data = data.replace('\\', '').replace('\n', '')
 if cleaned_data.startswith('"') and cleaned_data.endswith('"'):
     cleaned_data = cleaned_data[1:-1]
 
-print(cleaned_data)
-
 try:
     formatted_json = json.loads(cleaned_data)
 except json.JSONDecodeError as e:
