@@ -1,0 +1,75 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #f8f0e8;
+}
+
+@font-face {
+  font-family: "JellyFont";
+  src: url("./fonts/Twist\ Jelly\ Demo.otf") format("truetype");
+}
+
+.error-container {
+  text-align: center;
+  padding: 50px;
+  height: calc(100vh - 150px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-header {
+  font-size: 2em;
+  color: #ff6a00;
+  margin-bottom: 20px;
+}
+
+.error-content {
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.error-icon {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 5em;
+  margin: 0;
+}
+
+p {
+  font-size: 1.5em;
+  color: #666;
+  margin: 10px 0;
+}
+
+button {
+  background-color: #ff6a00;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.5em;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #e65c00;
+}
+.error-icon {
+  width: 400px; /* Increased size */
+  margin-bottom: 20px;
+}
+/* Define a separate class for the larger font size */
+.page-not-found {
+  font-size: 2.5em;
+  font-family: "JellyFont", sans-serif; /* Use the jelly-like font */
+  font-weight: bold; /* Make the text bold */
+}
