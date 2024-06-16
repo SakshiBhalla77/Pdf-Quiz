@@ -10,13 +10,21 @@ pip install -r requirements.txt
 ```
 npm install
 ```
+### Setup OpenAi Api Key
+Create a .env file in the root folder <br>
+Add the following line and save the file <br>
+```
+OPENAI_API_KEY = your-openai-api-key-here
+```
+
 ### How to run backend API
 Change your directory to "backend"<br>
 This starts the backend server
 `python3 server.py`<br>
 
 ### How to run frontend server
-Change your directory to "Frontend"
+Change your directory to "Frontend"<br>
+This starts the frontend code 
 `npm start`
 
 ### How to create a feature branch<br>
