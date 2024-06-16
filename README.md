@@ -1,7 +1,7 @@
 # PDF2QUIZ
 Website to convert any pdf into a quiz.
 
-### Install the following dependancies to run backend
+### Install dependancies to run backend
 ```
 pip install -r requirements.txt
 ```
