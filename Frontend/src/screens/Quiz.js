@@ -11,7 +11,7 @@ const Quiz = () => {
     setQuestions(rawQuestionsData);
   }, []);
 
-  const handleCheckboxChange = (questionId, optionId) => {
+  const handleOptionClick = (questionId, optionId) => {
     setSelectedOptions((prevState) => {
       const updatedOptions = { ...prevState };
       if (updatedOptions[questionId] === optionId) {
@@ -70,6 +70,9 @@ const Quiz = () => {
                 } else if (isCorrect) {
                   backgroundColor = "#DCF3E9";
                 }
+              } else if (isSelected) {
+                backgroundColor = "#FF9F66"; // Change this to your desired selected color
+                // backgroundColor = "#FF610"; // Change this to your desired selected color
               }
 
               return (
@@ -84,23 +87,12 @@ const Quiz = () => {
                     alignItems: "center",
                     backgroundColor,
                     cursor: "pointer",
+                    transition: "background-color 0.3s",
                   }}
                   onClick={() =>
-                    handleCheckboxChange(question.question_id, option.option_id)
+                    handleOptionClick(question.question_id, option.option_id)
                   }
                 >
-                  <input
-                    type="checkbox"
-                    checked={isSelected}
-                    onChange={() =>
-                      handleCheckboxChange(
-                        question.question_id,
-                        option.option_id
-                      )
-                    }
-                    className="customCheckbox"
-                    style={{ transform: "scale(1.5)" }}
-                  />
                   <span style={{ marginLeft: "10px" }}>{option.text}</span>
                 </div>
               );
@@ -114,7 +106,7 @@ const Quiz = () => {
             display: "flex",
             justifyContent: "center",
             marginTop: "20px",
-            marginBottom: "50px",
+            marginBottom: "70px",
           }}
         >
           <button
@@ -153,7 +145,7 @@ const Quiz = () => {
             out of{" "}
             <span style={{ fontWeight: "bold" }}>{questions.length}</span>
           </p>
-          <p style={{ marginTop: "20px", fontSize: "1rem" }}>
+          <p style={{ marginTop: "20px", marginBottom: "100px", fontSize: "1.2rem", fontWeight: "bold", color: "#DC3545" }}>
             {score >= questions.length / 2
               ? "Congratulations! You passed the quiz."
               : "Unfortunately, you did not pass the quiz. Please try again."}
