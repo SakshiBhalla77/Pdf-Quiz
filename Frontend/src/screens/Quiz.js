@@ -26,7 +26,9 @@ const Quiz = () => {
   const calculateScore = () => {
     let score = 0;
     questions.forEach((question) => {
-      if (selectedOptions[question.question_id] === question.correct_option_id) {
+      if (
+        selectedOptions[question.question_id] === question.correct_option_id
+      ) {
         score++;
       }
     });
@@ -35,7 +37,14 @@ const Quiz = () => {
   };
 
   return (
-    <div style={{ textAlign: "left", fontFamily: "Arial, sans-serif", maxWidth: "800px", margin: "0 auto" }}>
+    <div
+      style={{
+        textAlign: "left",
+        fontFamily: "Arial, sans-serif",
+        maxWidth: "800px",
+        margin: "0 auto",
+      }}
+    >
       <h2>Quiz</h2>
       <form style={{ fontSize: "1.2rem" }}>
         {questions.map((question) => (
@@ -50,16 +59,15 @@ const Quiz = () => {
             </div>
 
             {question.options.map((option) => {
-              const isSelected = selectedOptions[question.question_id] === option.option_id;
+              const isSelected =
+                selectedOptions[question.question_id] === option.option_id;
               const isCorrect = option.option_id === question.correct_option_id;
 
               let backgroundColor = "transparent";
               if (submitted) {
-                if (isSelected && isCorrect) {
-                  backgroundColor = "#DCF3E9";
-                } else if (isSelected && !isCorrect) {
-                  backgroundColor = "#FFE4E7";
-                } else if (!isSelected && isCorrect) {
+                if (isSelected) {
+                  backgroundColor = isCorrect ? "#DCF3E9" : "#FFE4E7";
+                } else if (isCorrect) {
                   backgroundColor = "#DCF3E9";
                 }
               }
@@ -74,20 +82,26 @@ const Quiz = () => {
                     marginBottom: "15px",
                     display: "flex",
                     alignItems: "center",
+                    backgroundColor,
+                    cursor: "pointer",
                   }}
+                  onClick={() =>
+                    handleCheckboxChange(question.question_id, option.option_id)
+                  }
                 >
                   <input
                     type="checkbox"
                     checked={isSelected}
-                    onChange={() => handleCheckboxChange(question.question_id, option.option_id)}
+                    onChange={() =>
+                      handleCheckboxChange(
+                        question.question_id,
+                        option.option_id
+                      )
+                    }
+                    className="customCheckbox"
                     style={{ transform: "scale(1.5)" }}
                   />
                   <span style={{ marginLeft: "10px" }}>{option.text}</span>
-                  {submitted && (
-                    <p style={{ marginLeft: "10px", color: isCorrect ? "green" : "red", fontSize: "0.9rem" }}>
-                      {isSelected && isCorrect ? "Correct" : isSelected ? "Incorrect" : ""}
-                    </p>
-                  )}
                 </div>
               );
             })}
@@ -95,7 +109,14 @@ const Quiz = () => {
         ))}
       </form>
       {!submitted && (
-        <div style={{ display: "flex", justifyContent: "center", marginTop: "20px", marginBottom: "50px" }}>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            marginTop: "20px",
+            marginBottom: "50px",
+          }}
+        >
           <button
             onClick={calculateScore}
             style={{
@@ -108,7 +129,7 @@ const Quiz = () => {
               borderRadius: "8px",
               boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",
               transition: "background-color 0.3s, transform 0.3s",
-              outline: "none", // Remove default focus outline
+              outline: "none",
             }}
             onMouseEnter={(e) => {
               e.target.style.backgroundColor = "#FF5C00";
@@ -123,19 +144,17 @@ const Quiz = () => {
           >
             Submit
           </button>
-
         </div>
-
       )}
       {submitted && (
         <div>
           <p style={{ color: "#333", marginTop: "20px", fontSize: "1.2rem" }}>
-            Your score is: <span style={{ fontWeight: "bold" }}>{score}</span> out
-            of <span style={{ fontWeight: "bold" }}>{questions.length}</span>
+            Your score is: <span style={{ fontWeight: "bold" }}>{score}</span>{" "}
+            out of{" "}
+            <span style={{ fontWeight: "bold" }}>{questions.length}</span>
           </p>
           <p style={{ marginTop: "20px", fontSize: "1rem" }}>
-            {score >= questions
-              .length / 2
+            {score >= questions.length / 2
               ? "Congratulations! You passed the quiz."
               : "Unfortunately, you did not pass the quiz. Please try again."}
           </p>

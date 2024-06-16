@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'BoldFont';
-  src: url('./fonts/bold.ttf') format('truetype');
+  font-family: "BoldFont";
+  src: url("./fonts/bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
@@ -13,7 +13,7 @@
 .h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  font-family: 'BoldFont', sans-serif;
+  font-family: "BoldFont", sans-serif;
 }
 
 .teamContainer {
@@ -56,7 +56,7 @@
 .content {
   text-align: center;
   margin-top: 1rem;
-  font-family: 'BoldFont', sans-serif;
+  font-family: "BoldFont", sans-serif;
 }
 
 .nameRole {

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -12,6 +12,8 @@ import boldFont from "../screens/fonts/bold.ttf"; // Import bold font file
 import lightFont from "../screens/fonts/light.ttf"; // Import light font file
 
 const Navbar = () => {
+  const [hoveredItem, setHoveredItem] = useState(null);
+
   const styles = {
     navbar: {
       display: "flex",
@@ -55,6 +57,7 @@ const Navbar = () => {
       fontSize: "1.1rem",
       position: "relative", // For underline hover effect
     },
+
     navLink: {
       textDecoration: "none",
       fontSize: "1rem",
@@ -64,7 +67,7 @@ const Navbar = () => {
       position: "relative",
     },
     navLinkHover: {
-      color: "#FFD700", // Hover text color
+      color: "black", // Hover text color
       transform: "scale(1.1)", // Slightly enlarge on hover
     },
     navLinkUnderline: {
@@ -97,6 +100,15 @@ const Navbar = () => {
       font-style: normal;
     }
   `;
+
+  const handleMouseEnter = (item) => {
+    setHoveredItem(item);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredItem(null);
+  };
+
   return (
     <>
       <style>{fontStyles}</style>
@@ -109,18 +121,48 @@ const Navbar = () => {
           </Link>
         </div>
         <ul style={styles.navLinks}>
-          <li style={styles.navItem}>
-            <Link to="/" style={styles.navLink}>
+          <li
+            style={styles.navItem}
+            onMouseEnter={() => handleMouseEnter("home")}
+            onMouseLeave={handleMouseLeave}
+          >
+            <Link
+              to="/"
+              style={{
+                ...styles.navLink,
+                ...(hoveredItem === "home" && styles.navLinkHover),
+              }}
+            >
               <FontAwesomeIcon icon={faHome} /> Home
             </Link>
           </li>
-          <li style={styles.navItem}>
-            <Link to="/about" style={styles.navLink}>
+          <li
+            style={styles.navItem}
+            onMouseEnter={() => handleMouseEnter("about")}
+            onMouseLeave={handleMouseLeave}
+          >
+            <Link
+              to="/about"
+              style={{
+                ...styles.navLink,
+                ...(hoveredItem === "about" && styles.navLinkHover),
+              }}
+            >
               <FontAwesomeIcon icon={faAddressBook} /> About
             </Link>
           </li>
-          <li style={styles.navItem}>
-            <Link to="/contact" style={styles.navLink}>
+          <li
+            style={styles.navItem}
+            onMouseEnter={() => handleMouseEnter("contact")}
+            onMouseLeave={handleMouseLeave}
+          >
+            <Link
+              to="/contact"
+              style={{
+                ...styles.navLink,
+                ...(hoveredItem === "contact" && styles.navLinkHover),
+              }}
+            >
               <FontAwesomeIcon icon={faEnvelope} /> Contact
             </Link>
           </li>
