@@ -1,9 +1,9 @@
-@font-face {
-  font-family: "BoldFont";
-  src: url("./fonts/bold.ttf") format("truetype");
+/* @font-face {
+  font-family: 'BoldFont';
+  src: url('./fonts/bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
-}
+} */
 
 .container {
   padding: 2rem;
@@ -61,10 +61,12 @@
 
 .nameRole {
   margin-bottom: 1rem;
+  font-family: "BoldFont";
 }
 
 .contact {
   text-align: center;
+  font-family: "lightFont";
 }
 
 .iconsContainer {
