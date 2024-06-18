@@ -131,10 +131,10 @@ body, html {
 .loading-text {
 
   margin-top: 20px;
-  /* font-family: 'Helvetica', sans-serif; */
+ 
   font-family: 'BoldFont', sans-serif;
-  color: #FF7A01; /* Orange */
-  font-size: 24px; /* Big text */
+  color: #FF7A01; 
+  font-size: 24px; 
   text-align: center;
 }
 

@@ -64,12 +64,11 @@ button:hover {
   background-color: #e65c00;
 }
 .error-icon {
-  width: 400px; /* Increased size */
+  width: 400px;
   margin-bottom: 20px;
 }
-/* Define a separate class for the larger font size */
 .page-not-found {
   font-size: 2.5em;
-  font-family: "JellyFont", sans-serif; /* Use the jelly-like font */
-  font-weight: bold; /* Make the text bold */
+  font-family: "JellyFont", sans-serif; 
+  font-weight: bold; 
 }

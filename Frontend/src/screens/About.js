@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "../index.css";
 
 const About = () => {
-  // State to track which card is being hovered over
   const [hoveredCard, setHoveredCard] = useState(null);
 
   const handleCardHover = (index) => {

@@ -1,30 +1,29 @@
 import React from "react";
-import boldFont from "./fonts/bold.ttf"; // Import the bold font file
-import lightFont from "./fonts/light.ttf"; // Import the light font file
+import boldFont from "./fonts/bold.ttf"; 
+import lightFont from "./fonts/light.ttf"; 
 
-// Define MainContent component
 function MainContent() {
   const styles = {
     mainContent: {
       textAlign: "center",
       marginTop: "4.2rem",
-      fontFamily: "LightFont", // Apply light font family to everything else
+      fontFamily: "LightFont", 
     },
     heading: {
       fontSize: "2rem",
-      color: "#333", // Improved readability with a darker color
-      marginBottom: "1rem", // Added margin for spacing
-      fontFamily: "BoldFont", // Apply bold font family to h2
+      color: "#333", 
+      marginBottom: "1rem", 
+      fontFamily: "BoldFont", 
     },
     orangeText: {
-      color: "#FF7A01", // Orange color for "Quizzes"
+      color: "#FF7A01", 
     },
     paragraph: {
-      fontSize: "1.2rem", // Slightly adjusted font size for better readability
-      color: "#555", // A lighter shade for contrast
-      margin: "0 auto", // Center the paragraph
-      maxWidth: "600px", // Restrict width for better readability
-      lineHeight: "1.6", // Improve readability with increased line height
+      fontSize: "1.2rem", 
+      color: "#555", 
+      margin: "0 auto", 
+      maxWidth: "600px", 
+      lineHeight: "1.6", 
     },
   };
 
@@ -51,5 +50,5 @@ function MainContent() {
   );
 }
 
-// Export MainContent component
+
 export default MainContent;

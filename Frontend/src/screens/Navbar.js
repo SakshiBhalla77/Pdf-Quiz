@@ -8,8 +8,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import "../index.css";
 
-import boldFont from "../screens/fonts/bold.ttf"; // Import bold font file
-import lightFont from "../screens/fonts/light.ttf"; // Import light font file
+import boldFont from "../screens/fonts/bold.ttf"; 
+import lightFont from "../screens/fonts/light.ttf"; 
 
 const Navbar = () => {
   const [hoveredItem, setHoveredItem] = useState(null);
@@ -20,12 +20,12 @@ const Navbar = () => {
       justifyContent: "space-between",
       alignItems: "center",
       padding: "1rem 2rem",
-      background: "linear-gradient(90deg, #FF7A01, #FF9901)", // Gradient background
-      color: "white", // White text
-      borderRadius: "15px", // Rounded edges
-      margin: "10px", // Optional: add margin to ensure it doesn't touch the edges of the screen
-      fontFamily: "BoldFont, sans-serif", // Apply custom font family
-      boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)", // Add shadow for depth
+      background: "linear-gradient(90deg, #FF7A01, #FF9901)", 
+      color: "white", 
+      borderRadius: "15px", 
+      margin: "10px", 
+      fontFamily: "BoldFont, sans-serif", 
+      boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)", 
     },
     logoContainer: {
       display: "flex",
@@ -39,12 +39,12 @@ const Navbar = () => {
     navTitle: {
       margin: "0",
       fontSize: "1.5rem",
-      color: "white", // White text
-      fontFamily: "BoldFont, sans-serif", // Apply custom font family
+      color: "white", 
+      fontFamily: "BoldFont, sans-serif", 
     },
     blackText: {
-      color: "#181818", // Black text
-      fontSize: "2rem", // Larger font size
+      color: "#181818", 
+      fontSize: "2rem",
     },
     navLinks: {
       listStyle: "none",
@@ -55,20 +55,20 @@ const Navbar = () => {
     navItem: {
       marginLeft: "20px",
       fontSize: "1.1rem",
-      position: "relative", // For underline hover effect
+      position: "relative", 
     },
 
     navLink: {
       textDecoration: "none",
       fontSize: "1.3rem",
-      color: "white", // White text
+      color: "white", 
       transition: "color 0.3s, transform 0.3s",
-      fontFamily: "lightFont, sans-serif", // Apply light font family
+      fontFamily: "lightFont, sans-serif",
       position: "relative",
     },
     navLinkHover: {
-      color: "black", // Hover text color
-      transform: "scale(1.1)", // Slightly enlarge on hover
+      color: "black",
+      transform: "scale(1.1)", 
     },
     navLinkUnderline: {
       content: "",

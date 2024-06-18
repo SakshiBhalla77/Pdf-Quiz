@@ -2,37 +2,36 @@ body {
   font-family: "Helvetica", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #FFF4EA; /* Light orange background */
+  background-color: #FFF4EA; 
   color: #333;
 }
 
-.navbar,
-.footer {
-  background-color: #FF7A01; /* Orange background */
-  color: white; /* White text */
+.navbar{
+  background-color: #FF7A01; 
+  color: white;
 }
 
 .nav-link {
-  color: white; /* White text */
+  color: white; 
   text-decoration: none;
-  transition: color 0.3s; /* Smooth transition for color change */
+  transition: color 0.3s; 
 }
 
 .nav-link:hover {
-  color: black; /* Black text on hover */
+  color: black; 
 }
 
 .button {
-  background-color: #FF7A01; /* Orange background */
-  color: white; /* White text */
+  background-color: #FF7A01; 
+  color: white; 
   border: none;
   padding: 1rem 2rem;
   cursor: pointer;
   font-size: 1rem;
-  transition: background-color 0.3s; /* Smooth transition for background color change */
+  transition: background-color 0.3s; 
 }
 
 .button:hover {
-  background-color: #FFA500; /* Light orange hover */
+  background-color: #FFA500; 
 }
 

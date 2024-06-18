@@ -1,6 +1,5 @@
 import React from "react";
-// import boldFont from "./fonts/bold.ttf";
-import './LoadingPage.css'; // Import the CSS file
+import './LoadingPage.css'; 
 const LoadingPage = () => {
 
   return (

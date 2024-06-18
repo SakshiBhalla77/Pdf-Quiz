@@ -161,7 +161,7 @@ const Quiz = () => {
             left: "0",
             width: "100%",
             height: "100%",
-            backgroundColor: "rgba(0, 0, 0, 0.5)", // Semi-transparent black overlay for background blur
+            backgroundColor: "rgba(0, 0, 0, 0.5)", 
             zIndex: "1000",
             display: "flex",
             justifyContent: "center",
@@ -170,7 +170,7 @@ const Quiz = () => {
         >
           <div
             style={{
-              backgroundColor: score >= questions.length / 2 ? "#C3E6CB" : "#FFD8BF", // Green for pass, orange for fail
+              backgroundColor: score >= questions.length / 2 ? "#C3E6CB" : "#FFD8BF", 
               padding: "20px",
               borderRadius: "8px",
               textAlign: "center",
@@ -180,7 +180,7 @@ const Quiz = () => {
             {score >= questions.length / 2 ? (
               <MdCheckCircle style={{ color: "#28A745", fontSize: "3rem", marginBottom: "10px" }} />
             ) : (
-              <div style={{ fontSize: "3rem", marginBottom: "10px" }}>😞</div> // Display a sad emoji or any other icon for fail
+              <div style={{ fontSize: "3rem", marginBottom: "10px" }}>😞</div> 
             )}
             <p style={{ fontSize: "1.2rem", color: "#333" }}>
               Your score is: <strong>{score}</strong> out of{" "}
