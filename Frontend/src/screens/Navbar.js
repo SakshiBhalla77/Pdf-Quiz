@@ -1,15 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faHome,
-  faAddressBook,
-  faEnvelope,
-} from "@fortawesome/free-solid-svg-icons";
-import "../index.css";
+import { faHome, faAddressBook, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
-import boldFont from "../screens/fonts/bold.ttf"; 
-import lightFont from "../screens/fonts/light.ttf"; 
+import boldFont from "../screens/fonts/bold.ttf";
+import lightFont from "../screens/fonts/light.ttf";
 
 const Navbar = () => {
   const [hoveredItem, setHoveredItem] = useState(null);
@@ -20,12 +15,12 @@ const Navbar = () => {
       justifyContent: "space-between",
       alignItems: "center",
       padding: "1rem 2rem",
-      background: "linear-gradient(90deg, #FF7A01, #FF9901)", 
-      color: "white", 
-      borderRadius: "15px", 
-      margin: "10px", 
-      fontFamily: "BoldFont, sans-serif", 
-      boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)", 
+      background: "linear-gradient(90deg, #FF7A01, #FF9901)",
+      color: "white",
+      borderRadius: "15px",
+      margin: "10px",
+      fontFamily: "BoldFont, sans-serif",
+      boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
     },
     logoContainer: {
       display: "flex",
@@ -39,11 +34,11 @@ const Navbar = () => {
     navTitle: {
       margin: "0",
       fontSize: "1.5rem",
-      color: "white", 
-      fontFamily: "BoldFont, sans-serif", 
+      color: "white",
+      fontFamily: "BoldFont, sans-serif",
     },
     blackText: {
-      color: "#181818", 
+      color: "#181818",
       fontSize: "2rem",
     },
     navLinks: {
@@ -55,20 +50,19 @@ const Navbar = () => {
     navItem: {
       marginLeft: "20px",
       fontSize: "1.1rem",
-      position: "relative", 
+      position: "relative",
     },
-
     navLink: {
       textDecoration: "none",
       fontSize: "1.3rem",
-      color: "white", 
+      color: "white",
       transition: "color 0.3s, transform 0.3s",
       fontFamily: "lightFont, sans-serif",
       position: "relative",
     },
     navLinkHover: {
       color: "black",
-      transform: "scale(1.1)", 
+      transform: "scale(1.1)",
     },
     navLinkUnderline: {
       content: "",
