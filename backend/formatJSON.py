@@ -6,7 +6,6 @@ Fail_count = False
 current_dir = os.path.dirname(os.path.abspath(__file__))
 run_llm_path = os.path.join(current_dir, 'runLLm.py')
 project_root = os.path.abspath(os.path.join(current_dir, '..'))
-print(project_root)
 input_file_path = os.path.join(project_root, 'Frontend', 'src', 'response', 'response.txt')
 output_file_path = os.path.join(project_root, 'Frontend', 'src', 'response', 'formattedQuestions.json')
 
